@@ -1,1 +1,3 @@
-require("options")
+require("bootstrap.launch")
+require("bootstrap.options")
+require("bootstrap.lazy")
