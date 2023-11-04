@@ -15,9 +15,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	import = "plugins",
+	{ import = "plugins" },
+	{ import = "plugins.lua" },
+}, {
 	install = {
 		colorscheme = { settings.colorscheme },
+	},
+	checker = {
+		enabled = true,
+		notify = false,
 	},
 	ui = {
 		border = "rounded",
