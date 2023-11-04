@@ -1,10 +1,10 @@
 local k = vim.keymap.set
 
-k("n", "<leader>q", "<cmd>:q<CR>", { desc = "Quit" })
-k("n", "<leader>c", "<cmd>:bd<CR>", { desc = "Close buffer" })
-k("n", "<leader>o", "<cmd>:on<CR>", { desc = "Close others windows" })
-k("n", "<leader>bo", "<cmd>:BufferLineCloseOthers<CR>", { desc = "Close others buffers" })
-k("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Files explorer" })
+k({ "x", "n" }, "<leader>q", "<cmd>:q<CR>", { desc = "Quit" })
+k({ "x", "n" }, "<leader>c", "<cmd>:bd<CR>", { desc = "Close buffer" })
+k({ "x", "n" }, "<leader>o", "<cmd>:on<CR>", { desc = "Close others windows" })
+k({ "x", "n" }, "<leader>bo", "<cmd>:BufferLineCloseOthers<CR>", { desc = "Close others buffers" })
+k({ "x", "n" }, "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Files explorer" })
 
 -- navigation
 k("n", "H", ":BufferLineCyclePrev<CR>")
@@ -19,6 +19,9 @@ k("x", "<A-j>", ":m '>+1<CR>gv-gv")
 k("x", "<A-k>", ":m '<-2<CR>gv-gv")
 k("n", "]q", ":cnext<CR>")
 k("n", "[q", ":cprev<CR>")
+
+k("n", "<leader>/", "<Plug>(comment_toggle_linewise_current)", { desc = "Comment Toggle" })
+k("x", "<leader>/", "<Plug>(comment_toggle_linewise_visual)", { desc = "Comment Toggle" })
 
 -- search
 k("n", "<leader>sf", "<cmd>Telescope find_files<CR>", { desc = "Search by filename" })
