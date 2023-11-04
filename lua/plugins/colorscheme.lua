@@ -1,7 +1,7 @@
 return {
-  "olivercederborg/poimandres.nvim",
+  "folke/tokyonight.nvim",
   priority = 100,
   config = function()
-    vim.cmd("colorscheme poimandres")
+    vim.cmd([[colorscheme tokyonight]])
   end,
 }

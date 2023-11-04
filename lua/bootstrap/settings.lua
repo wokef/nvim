@@ -1,3 +1,3 @@
 return {
-  colorscheme = "poimandres",
+  colorscheme = "tokyonight",
 }
