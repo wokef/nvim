@@ -1,4 +1,6 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+local settings = require("../bootstrap/settings")
+
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
@@ -15,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	import = "plugins",
 	install = {
-		colorscheme = { "primer_dark", "habamax" },
+		colorscheme = { settings.colorscheme },
 	},
 	ui = {
 		border = "rounded",
