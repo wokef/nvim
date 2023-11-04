@@ -1,5 +1,3 @@
-local M = {
+return {
 	"williamboman/mason.nvim",
 }
-
-return M
