@@ -11,4 +11,10 @@ return {
     linesChanged = "",
     linesRemoved = "",
   },
+  lsp = {
+    Error = " ",
+    Warn = " ",
+    Hint = "󰠠 ",
+    Info = " ",
+  },
 }
