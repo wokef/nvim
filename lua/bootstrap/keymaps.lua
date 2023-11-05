@@ -10,6 +10,10 @@ k({ "x", "n" }, "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Files explorer
 k("n", "H", ":BufferLineCyclePrev<CR>")
 k("n", "L", ":BufferLineCycleNext<CR>")
 
+-- terminal
+k({ "n", "x", "t" }, "<C-\\>", "<cmd>ToggleTerm direction=float<CR>", { desc = "Toggle terminal float" })
+k("t", "<C-l>", "<C-\\><C-n><C-\\>", { desc = "Terminal in normal mode" })
+
 -- move selection indent mode and up/down
 k("v", "<", "<gv")
 k("v", ">", ">gv")
