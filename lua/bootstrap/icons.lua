@@ -1,15 +1,15 @@
 return {
   arrows = {
-    circleRight = "",
+    circleRight = " ",
   },
   folders = {
-    closed = "󰉋",
+    closed = "󰉋 ",
   },
   git = {
     branch = "",
-    linesAdded = "",
-    linesChanged = "",
-    linesRemoved = "",
+    linesAdded = " ",
+    linesChanged = " ",
+    linesRemoved = " ",
   },
   lsp = {
     Error = " ",
@@ -17,4 +17,6 @@ return {
     Hint = "󰠠 ",
     Info = " ",
   },
+  pipe = "▏",
+  middot = "",
 }
