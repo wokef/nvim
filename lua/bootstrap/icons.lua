@@ -2,6 +2,13 @@ return {
   arrows = {
     circleRight = " ",
   },
+  close = " ",
+  code = " ",
+  download = " ",
+  files = {
+    new = " ",
+    find = "󰱼 ",
+  },
   folders = {
     closed = "󰉋 ",
   },
@@ -11,6 +18,7 @@ return {
     linesChanged = " ",
     linesRemoved = " ",
   },
+  history = " ",
   lsp = {
     Error = " ",
     Warn = " ",
@@ -18,5 +26,6 @@ return {
     Info = " ",
   },
   pipe = "▏",
-  middot = "",
+  search = " ",
+  settings = " ",
 }
