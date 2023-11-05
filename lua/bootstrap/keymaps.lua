@@ -6,6 +6,9 @@ k({ "x", "n" }, "<leader>o", "<cmd>:on<CR>", { desc = "Close others windows" })
 k({ "x", "n" }, "<leader>bo", "<cmd>:BufferLineCloseOthers<CR>", { desc = "Close others buffers" })
 k({ "x", "n" }, "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Files explorer" })
 
+k({ "x", "n" }, "ss", ":split<CR>", { desc = "Split Horizontal" })
+k({ "x", "n" }, "vs", ":vsplit<CR>", { desc = "Split verical" })
+
 -- navigation
 k("n", "H", ":BufferLineCyclePrev<CR>")
 k("n", "L", ":BufferLineCycleNext<CR>")
@@ -28,9 +31,11 @@ k("n", "<leader>/", "<Plug>(comment_toggle_linewise_current)", { desc = "Comment
 k("x", "<leader>/", "<Plug>(comment_toggle_linewise_visual)", { desc = "Comment Toggle" })
 
 k({ "n", "x" }, "<leader>lt", "<cmd>Vista nvim_lsp<CR>", { desc = "LSP Tagbar" })
+k("n", "<F4>", "<cmd>IBLToggle<CR>", { desc = "Toggle indent lines" })
 
 -- search
-k("n", "<leader>sf", "<cmd>Telescope find_files<CR>", { desc = "Search by filename" })
+k("n", "<leader>sf", "<cmd>Telescope find_files<R>", { desc = "Search by filename" })
+k("n", "<leader>sl", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Search in file lines" })
 k("n", "<leader>st", "<cmd>Telescope live_grep<CR>", { desc = "Search in file content" })
 k("n", "<leader>sr", "<cmd>Telescope oldfiles<CR>", { desc = "Search recent file" })
 k("n", "<leader>sb", "<cmd>Telescope buffers<CR>", { desc = "Search in buffers" })
