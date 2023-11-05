@@ -23,6 +23,8 @@ k("n", "[q", ":cprev<CR>")
 k("n", "<leader>/", "<Plug>(comment_toggle_linewise_current)", { desc = "Comment Toggle" })
 k("x", "<leader>/", "<Plug>(comment_toggle_linewise_visual)", { desc = "Comment Toggle" })
 
+k({ "n", "x" }, "<leader>lt", "<cmd>Vista nvim_lsp<CR>", { desc = "LSP Tagbar" })
+
 -- search
 k("n", "<leader>sf", "<cmd>Telescope find_files<CR>", { desc = "Search by filename" })
 k("n", "<leader>st", "<cmd>Telescope live_grep<CR>", { desc = "Search in file content" })
