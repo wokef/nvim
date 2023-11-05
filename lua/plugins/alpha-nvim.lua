@@ -17,7 +17,7 @@ return {
       dashboard.button("f", " ➜ " .. icons.files.find .. " Find File", "<cmd>Telescope find_files<CR>"),
       dashboard.button("t", " ➜ " .. icons.search .. " Find Text", "<cmd>Telescope live_grep<CR>"),
       dashboard.button("u", " ➜ " .. icons.download .. " Check for update", "<cmd>Lazy update<CR>"),
-      dashboard.button("c", " ➜ " .. icons.settings .. " Config", "<cmd>e $MYVIMRC<CR>"),
+      dashboard.button("c", " ➜ " .. icons.settings .. " Configuration", "<cmd>e $MYVIMRC<CR>"),
       dashboard.button("q", " ➜ " .. icons.close .. " Quit", "<cmd>qa<CR>"),
     }
 

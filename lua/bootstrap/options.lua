@@ -41,4 +41,5 @@ vim.opt.timeoutlen = 1000
 vim.opt.title = false
 vim.opt.undofile = true
 vim.opt.updatetime = 100
+vim.opt.formatoptions = "jcoqlr"
 vim.opt.colorcolumn = "80,120"

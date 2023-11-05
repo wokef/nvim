@@ -27,5 +27,5 @@ return {
   },
   pipe = "▏",
   search = " ",
-  settings = " ",
+  settings = " ",
 }
