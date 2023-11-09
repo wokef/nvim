@@ -1,6 +1,7 @@
 local k = vim.keymap.set
 
 k({ "x", "n" }, "<leader>q", "<cmd>:q<CR>", { desc = "Quit" })
+k({ "x", "n" }, "<leader>w", "<cmd>:w<CR>", { desc = "Write" })
 k({ "x", "n" }, "<leader>c", "<cmd>:bd<CR>", { desc = "Close buffer" })
 k({ "x", "n" }, "<leader>o", "<cmd>:on<CR>", { desc = "Close others windows" })
 k({ "x", "n" }, "<leader>bo", "<cmd>:BufferLineCloseOthers<CR>", { desc = "Close others buffers" })
