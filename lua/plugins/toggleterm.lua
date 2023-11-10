@@ -2,5 +2,10 @@ return {
   "akinsho/toggleterm.nvim",
   cmd = { "ToggleTerm" },
   version = "*",
-  config = true,
+  opts = {
+    float_opts = {
+      width = 1000,
+      height = 25,
+    },
+  },
 }
