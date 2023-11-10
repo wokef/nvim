@@ -18,7 +18,7 @@ return {
       dashboard.button("n", icons.files.new .. " New File", "<cmd>ene<CR>"),
       dashboard.button("f", icons.files.find .. " Find File", "<cmd>Telescope find_files<CR>"),
       dashboard.button("t", icons.search .. " Find Text", "<cmd>Telescope live_grep<CR>"),
-      dashboard.button("u", icons.download .. " Check for update", "<cmd>Lazy update<CR>"),
+      dashboard.button("p", icons.download .. " Plugins manager", "<cmd>Lazy<CR>"),
       dashboard.button("c", icons.settings .. " Configuration", "<cmd>e $MYVIMRC<BAR>cd $HOME/.config/nvim<CR>"),
       dashboard.button("q", icons.close .. " Quit", "<cmd>qa<CR>"),
     }
