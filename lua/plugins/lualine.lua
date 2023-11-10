@@ -13,17 +13,6 @@ return {
     local normal_a = { bg = colors.cyan, fg = colors.black, gui = "" }
     local visual_a = { bg = colors.orange, fg = colors.white, giu = "" }
 
-    local function gitdiff()
-      local gitsigns = vim.b.gitsigns_status_dict
-      if gitsigns then
-        return {
-          added = gitsigns.added,
-          modified = gitsigns.changed,
-          removed = gitsigns.removed,
-        }
-      end
-    end
-
     local sections = {
       lualine_a = { "mode" },
       lualine_b = {
@@ -36,16 +25,37 @@ return {
       lualine_c = {
         {
           "diff",
-          source = gitdiff(),
+          source = function()
+            local gitsigns = vim.b.gitsigns_status_dict
+            if gitsigns then
+              return {
+                added = gitsigns.added,
+                modified = gitsigns.changed,
+                removed = gitsigns.removed,
+              }
+            end
+          end,
           symbols = {
-            added = icons.git.linesAdded .. " ",
-            modified = icons.git.linesChanged .. " ",
-            removed = icons.git.linesRemoved .. " ",
+            added = icons.git.linesAdded,
+            modified = icons.git.linesChanged,
+            removed = icons.git.linesRemoved,
           },
           padding = { left = 2, right = 1 },
         },
       },
-      lualine_x = { "encoding", "fileformat", "filetype" },
+      lualine_x = {
+        {
+          "diagnostics",
+          sources = { "nvim_diagnostic" },
+          symbols = {
+            error = icons.lsp.Error,
+            warn = icons.lsp.Warn,
+            info = icons.lsp.Info,
+            hint = icons.lsp.Hint,
+          },
+        },
+        "filetype",
+      },
       lualine_y = { "progress" },
       lualine_z = { "location" },
     }
