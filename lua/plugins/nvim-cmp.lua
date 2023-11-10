@@ -46,6 +46,7 @@ return {
         { name = "luasnip" },
         { name = "buffer" },
         { name = "path" },
+        { name = "vim-dadbod-completion" },
       }),
       formatting = {
         format = lspkind.cmp_format({ maxwidth = 50, ellipsis_char = "..." }),

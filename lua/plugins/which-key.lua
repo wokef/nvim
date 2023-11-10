@@ -16,6 +16,7 @@ return {
       b = { name = "Buffer" },
       g = { name = "Git" },
       l = { name = "LSP" },
+      p = { name = "Plugins" },
       s = { name = "Search" },
     }, {
       prefix = "<leader>",
