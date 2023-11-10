@@ -47,9 +47,10 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
+    lspconfig["emmet_ls"].setup({ capabilities = capabilities, on_attach = on_attach })
+    lspconfig["lua_ls"].setup({ capabilities = capabilities, on_attach = on_attach })
     lspconfig["phpactor"].setup({ capabilities = capabilities, on_attach = on_attach })
     lspconfig["tsserver"].setup({ capabilities = capabilities, on_attach = on_attach })
     lspconfig["volar"].setup({ capabilities = capabilities, on_attach = on_attach })
-    lspconfig["emmet_ls"].setup({ capabilities = capabilities, on_attach = on_attach })
   end,
 }
