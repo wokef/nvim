@@ -48,7 +48,24 @@ return {
     end
 
     lspconfig["emmet_ls"].setup({ capabilities = capabilities, on_attach = on_attach })
-    lspconfig["lua_ls"].setup({ capabilities = capabilities, on_attach = on_attach })
+    lspconfig["lua_ls"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { "vim" },
+          },
+          workspace = {
+            library = {
+              [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+              [vim.fn.stdpath("config") .. "/lua"] = true,
+            },
+          },
+        },
+      },
+    })
+
     lspconfig["phpactor"].setup({ capabilities = capabilities, on_attach = on_attach })
     lspconfig["tsserver"].setup({ capabilities = capabilities, on_attach = on_attach })
     lspconfig["volar"].setup({ capabilities = capabilities, on_attach = on_attach })
