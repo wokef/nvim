@@ -2,7 +2,7 @@ local k = vim.keymap.set
 
 k({ "x", "n" }, "<leader>q", "<cmd>:q<CR>", { desc = "Quit" })
 k({ "x", "n" }, "<leader>w", "<cmd>:w<CR>", { desc = "Write" })
-k({ "x", "n" }, "<leader>c", "<cmd>:bd<CR>", { desc = "Close buffer" })
+k({ "x", "n" }, "<leader>c", "<cmd>:BufferKill<CR>", { desc = "Close buffer" })
 k({ "x", "n" }, "<leader>o", "<cmd>:on<CR>", { desc = "Close others windows" })
 k({ "x", "n" }, "<leader>bo", "<cmd>:BufferLineCloseOthers<CR>", { desc = "Close others buffers" })
 k({ "x", "n" }, "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Files explorer" })
@@ -35,7 +35,7 @@ k({ "n", "x" }, "<leader>lt", "<cmd>Vista nvim_lsp<CR>", { desc = "LSP Tagbar" }
 k("n", "<F4>", "<cmd>IBLToggle<CR>", { desc = "Toggle indent lines" })
 
 -- search
-k("n", "<leader>sf", "<cmd>Telescope find_files<R>", { desc = "Search by filename" })
+k("n", "<leader>sf", "<cmd>Telescope find_files<CR>", { desc = "Search by filename" })
 k("n", "<leader>sl", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Search in file lines" })
 k("n", "<leader>st", "<cmd>Telescope live_grep<CR>", { desc = "Search in file content" })
 k("n", "<leader>sr", "<cmd>Telescope oldfiles<CR>", { desc = "Search recent file" })
