@@ -25,6 +25,7 @@ return {
     Hint = "󰠠 ",
     Info = " ",
   },
+  target = "󰀘",
   pipe = "▏",
   search = " ",
   settings = " ",
