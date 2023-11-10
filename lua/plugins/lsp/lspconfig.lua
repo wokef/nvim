@@ -37,6 +37,8 @@ return {
       k("n", "<leader>rs", ":LspRestart<CR>", opts("Restart LSP"))
     end
 
+    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single" })
+
     local capabilities = cmp_nvim_lsp.default_capabilities()
 
     local signs = icons.lsp
@@ -48,5 +50,6 @@ return {
     lspconfig["phpactor"].setup({ capabilities = capabilities, on_attach = on_attach })
     lspconfig["tsserver"].setup({ capabilities = capabilities, on_attach = on_attach })
     lspconfig["volar"].setup({ capabilities = capabilities, on_attach = on_attach })
+    lspconfig["emmet_ls"].setup({ capabilities = capabilities, on_attach = on_attach })
   end,
 }
