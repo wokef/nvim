@@ -28,13 +28,13 @@ return {
       k("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts("Show LSP implementations"))
       k("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts("Show LSP type definitions"))
       k({ "n", "v" }, "<leader>a", vim.lsp.buf.code_action, opts("See available code actions"))
-      k("n", "<leader>rn", vim.lsp.buf.rename, opts("Smart rename"))
+      k("n", "<leader>ln", vim.lsp.buf.rename, opts("Smart rename"))
       k("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts("Show buffer diagnostics"))
       k("n", "<leader>d", vim.diagnostic.open_float, opts("Show line diagnostics"))
       k("n", "[d", vim.diagnostic.goto_prev, opts("Go to previous diagnostic"))
       k("n", "]d", vim.diagnostic.goto_next, opts("Go to next diagnostic"))
       k("n", "K", vim.lsp.buf.hover, opts("Show documentation for what is under cursor"))
-      k("n", "<leader>rs", ":LspRestart<CR>", opts("Restart LSP"))
+      k("n", "<leader>lR", ":LspRestart<CR>", opts("Restart LSP"))
     end
 
     vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single" })

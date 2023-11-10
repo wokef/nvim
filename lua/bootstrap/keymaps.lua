@@ -37,6 +37,7 @@ k({ "n", "x" }, "<leader>lt", "<cmd>Vista nvim_lsp<CR>", { desc = "LSP Tagbar" }
 k("n", "<F4>", "<cmd>IBLToggle<CR>", { desc = "Toggle indent lines" })
 
 -- search
+k("n", "<leader>f", "<cmd>Telescope find_files<CR>", { desc = "Search by filename" })
 k("n", "<leader>sf", "<cmd>Telescope find_files<CR>", { desc = "Search by filename" })
 k("n", "<leader>sl", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Search in file lines" })
 k("n", "<leader>st", "<cmd>Telescope live_grep<CR>", { desc = "Search in file content" })
