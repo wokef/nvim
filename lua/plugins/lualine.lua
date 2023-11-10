@@ -3,8 +3,8 @@ return {
   event = { "VimEnter" },
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
-    local icons = require("../bootstrap/icons")
-    local colors = require("../bootstrap/colors")
+    local icons = require("bootstrap.icons")
+    local colors = require("bootstrap.colors")
 
     local text_dark = { bg = colors.black, fg = colors.normal }
     local text_light = { bg = colors.black_light, fg = colors.grey_light }
