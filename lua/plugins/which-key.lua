@@ -18,6 +18,7 @@ return {
       l = { name = "LSP" },
       p = { name = "Plugins" },
       s = { name = "Search" },
+      t = { name = "Test" },
     }, {
       prefix = "<leader>",
     })

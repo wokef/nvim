@@ -47,6 +47,10 @@ k("n", "<leader>st", "<cmd>Telescope live_grep<CR>", { desc = "Search in file co
 k("n", "<leader>sr", "<cmd>Telescope oldfiles<CR>", { desc = "Search recent file" })
 k("n", "<leader>sb", "<cmd>Telescope buffers<CR>", { desc = "Search in buffers" })
 
+-- test
+k({ "x", "n" }, "<leader>ta", "<cmd>:TestFile<CR>", { desc = "Run full file tests" })
+k({ "x", "n" }, "<leader>ts", "<cmd>:TestNearest<CR>", { desc = "Run current focused test" })
+
 -- git
 k("n", "<leader>gg", function()
   local Terminal = require("toggleterm.terminal").Terminal
