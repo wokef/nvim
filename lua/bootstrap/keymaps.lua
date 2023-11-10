@@ -1,5 +1,6 @@
 local k = vim.keymap.set
 
+k({ "x", "n" }, "<leader>h", "<cmd>nohlsearch<CR>", { desc = "No highlight" })
 k({ "x", "n" }, "<leader>q", "<cmd>:q<CR>", { desc = "Quit" })
 k({ "x", "n" }, "<leader>w", "<cmd>:w<CR>", { desc = "Write" })
 k({ "x", "n" }, "<leader>c", "<cmd>:BufferKill<CR>", { desc = "Close buffer" })
