@@ -51,6 +51,9 @@ k("n", "<leader>sb", "<cmd>Telescope buffers<CR>", { desc = "Search in buffers" 
 k({ "x", "n" }, "<leader>ta", "<cmd>:TestFile<CR>", { desc = "Run full file tests" })
 k({ "x", "n" }, "<leader>ts", "<cmd>:TestNearest<CR>", { desc = "Run current focused test" })
 
+-- terminal
+k({ "x", "n" }, "<C-\\>", "<cmd>:ToggleTerm name=floated direction=float<CR>", { desc = "Terminal toggle float" })
+
 -- git
 k("n", "<leader>gg", function()
   local Terminal = require("toggleterm.terminal").Terminal
