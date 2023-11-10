@@ -4,6 +4,14 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     local icons = require("../bootstrap/icons")
+    local colors = require("../bootstrap/colors")
+
+    local text_dark = { bg = colors.black, fg = colors.normal }
+    local text_light = { bg = colors.black_light, fg = colors.grey_light }
+    local inactive = { bg = colors.black_light, fg = colors.grey, gui = "" }
+    local insert_a = { bg = colors.fuksia, fg = colors.white, gui = "" }
+    local normal_a = { bg = colors.cyan, fg = colors.black, gui = "" }
+    local visual_a = { bg = colors.orange, fg = colors.white, giu = "" }
 
     local function gitdiff()
       local gitsigns = vim.b.gitsigns_status_dict
@@ -44,7 +52,33 @@ return {
 
     local config = {
       options = {
-        theme = "auto",
+        theme = {
+          normal = {
+            a = normal_a,
+            b = text_light,
+            c = text_dark,
+          },
+          insert = {
+            a = insert_a,
+            b = text_light,
+            c = text_dark,
+          },
+          visual = {
+            a = visual_a,
+            b = text_light,
+            c = text_dark,
+          },
+          replace = {
+            a = insert_a,
+            b = text_light,
+            c = text_dark,
+          },
+          inactive = {
+            a = inactive,
+            b = inactive,
+            c = inactive,
+          },
+        },
         globalstatus = true,
         icons_enabled = true,
         component_separators = { left = "", right = "" },
