@@ -6,7 +6,7 @@ return {
     { "antosha417/nvim-lsp-file-operations", config = true },
   },
   config = function()
-    local icons = require("../bootstrap.icons")
+    local icons = require("bootstrap.icons")
     local lspconfig = require("lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
@@ -45,19 +45,8 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
-    lspconfig["phpactor"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
-    lspconfig["tsserver"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
-    lspconfig["volar"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
+    lspconfig["phpactor"].setup({ capabilities = capabilities, on_attach = on_attach })
+    lspconfig["tsserver"].setup({ capabilities = capabilities, on_attach = on_attach })
+    lspconfig["volar"].setup({ capabilities = capabilities, on_attach = on_attach })
   end,
 }
