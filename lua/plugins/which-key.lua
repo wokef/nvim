@@ -13,8 +13,10 @@ return {
     })
 
     which_key.register({
-      f = { name = "Search" },
+      b = { name = "Buffer" },
       g = { name = "Git" },
+      l = { name = "LSP" },
+      s = { name = "Search" },
     }, {
       prefix = "<leader>",
     })
