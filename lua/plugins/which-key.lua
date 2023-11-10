@@ -1,12 +1,18 @@
 return {
   "folke/which-key.nvim",
   event = "VeryLazy",
-  init = function()
+  config = function()
     vim.o.timeout = true
     vim.o.timeoutlen = 500
-  end,
-  config = function()
-    require("which-key").register({
+    local which_key = require("which-key")
+
+    which_key.setup({
+      window = {
+        border = "single",
+      },
+    })
+
+    which_key.register({
       f = { name = "Search" },
       g = { name = "Git" },
     }, {
