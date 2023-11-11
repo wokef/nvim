@@ -36,6 +36,7 @@ return {
         }),
         formatting.prettier.with({
           extra_args = {
+            "--no-editorconfig",
             "--config",
             lsp_config("prettier"),
           },
