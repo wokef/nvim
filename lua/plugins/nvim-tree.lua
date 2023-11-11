@@ -3,14 +3,15 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   cmd = { "NvimTreeToggle", "NvimTreeFocus" },
   config = function()
-    vim.g.loaded_netrw = 1
-    vim.g.loaded_netrwPlugin = 1
+    -- vim.g.loaded_netrw = 1
+    -- vim.g.loaded_netrwPlugin = 1
 
     require("nvim-tree").setup({
       sort_by = "name",
       sync_root_with_cwd = true,
       on_attach = "default",
       hijack_cursor = false,
+      disable_netrw = false,
       renderer = {
         add_trailing = false,
         group_empty = false,
