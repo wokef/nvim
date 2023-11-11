@@ -1,5 +1,9 @@
 local M = {}
 
+function M.lsp_config(file)
+  return vim.fn.expand("$HOME") .. "/.config/nvim/lua/plugins/lsp/settings/" .. file .. ".json"
+end
+
 function M.buf_kill(kill_command, bufnr, force)
   kill_command = kill_command or "bd"
 

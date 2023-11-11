@@ -23,17 +23,24 @@ return {
     local diagnostics = null_ls.builtins.diagnostics
     local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
+    local lsp_config = require("bootstrap.common").lsp_config
+
     local config = {
       root_dir = null_ls_utils.root_pattern(".null-ls-root", "Makefile", ".git", "package.json"),
       sources = {
         formatting.pint.with({
           extra_args = {
             "--config",
-            vim.fn.expand("$HOME") .. "/.config/nvim/lua/plugins/lsp/settings/pint.json",
+            lsp_config("pint"),
+          },
+        }),
+        formatting.prettier.with({
+          extra_args = {
+            "--config",
+            lsp_config("prettier"),
           },
         }),
         formatting.stylua,
-        formatting.prettier,
         diagnostics.eslint_d,
       },
       -- configure format on save
