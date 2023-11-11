@@ -26,9 +26,14 @@ return {
     local config = {
       root_dir = null_ls_utils.root_pattern(".null-ls-root", "Makefile", ".git", "package.json"),
       sources = {
-        formatting.prettier,
-        formatting.pint,
+        formatting.pint.with({
+          extra_args = {
+            "--config",
+            vim.fn.expand("$HOME") .. "/.config/nvim/lua/plugins/lsp/settings/pint.json",
+          },
+        }),
         formatting.stylua,
+        formatting.prettier,
         diagnostics.eslint_d,
       },
       -- configure format on save
