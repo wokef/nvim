@@ -66,6 +66,7 @@ return {
       },
     })
 
+    lspconfig["jsonls"].setup({ capabilities = capabilities, on_attach = on_attach })
     lspconfig["phpactor"].setup({ capabilities = capabilities, on_attach = on_attach })
     lspconfig["tsserver"].setup({ capabilities = capabilities, on_attach = on_attach })
     lspconfig["volar"].setup({ capabilities = capabilities, on_attach = on_attach })
