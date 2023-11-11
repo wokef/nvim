@@ -1,26 +1,27 @@
 local k = vim.keymap.set
 
-k({ "x", "n" }, "<leader>h", "<cmd>nohlsearch<CR>", { desc = "No highlight" })
-k({ "x", "n" }, "<leader>q", "<cmd>:q<CR>", { desc = "Quit" })
-k({ "x", "n" }, "<leader>w", "<cmd>:w<CR>", { desc = "Write" })
-k({ "x", "n" }, "<leader>c", "<cmd>:BufferKill<CR>", { desc = "Close buffer" })
-k({ "x", "n" }, "<leader>o", "<cmd>:on<CR>", { desc = "Close others windows" })
-k({ "x", "n" }, "<leader>bo", "<cmd>:BufferLineCloseOthers<CR>", { desc = "Close others buffers" })
-k({ "x", "n" }, "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Files explorer" })
-k({ "x", "n" }, "<leader>;", "<cmd>:Alpha<CR>", { desc = "Dashboard" })
-k({ "x", "n" }, "<leader>pm", "<cmd>:Lazy<CR>", { desc = "Lazy manager" })
-k({ "x", "n" }, "<leader>lm", "<cmd>:Mason<CR>", { desc = "Mason" })
-k({ "x", "n" }, "<leader>pD", "<cmd>:DBUIToggle<CR>", { desc = "Database UI" })
+k("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "No highlight" })
+k("n", "<leader>q", "<cmd>:q<CR>", { desc = "Quit" })
+k("n", "<leader>w", "<cmd>:w<CR>", { desc = "Write" })
+k("n", "<leader>c", "<cmd>:BufferKill<CR>", { desc = "Close buffer" })
+k("n", "<leader>o", "<cmd>:on<CR>", { desc = "Close others windows" })
+k("n", "<leader>bo", "<cmd>:BufferLineCloseOthers<CR>", { desc = "Close others buffers" })
+k("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Files explorer" })
+k("n", "<leader>;", "<cmd>:Alpha<CR>", { desc = "Dashboard" })
+k("n", "<leader>pm", "<cmd>:Lazy<CR>", { desc = "Lazy manager" })
+k("n", "<leader>lm", "<cmd>:Mason<CR>", { desc = "Mason" })
+k("n", "<leader>pD", "<cmd>:DBUIToggle<CR>", { desc = "Database UI" })
 
-k({ "x", "n" }, "ss", ":split<CR>", { desc = "Split Horizontal" })
-k({ "x", "n" }, "vs", ":vsplit<CR>", { desc = "Split verical" })
+k("n", "ss", ":split<CR>", { desc = "Split Horizontal" })
+k("n", "vs", ":vsplit<CR>", { desc = "Split verical" })
 
 -- navigation
 k("n", "H", ":BufferLineCyclePrev<CR>")
 k("n", "L", ":BufferLineCycleNext<CR>")
 
 -- terminal
-k({ "n", "x", "t" }, "<C-\\>", "<cmd>ToggleTerm direction=float<CR>", { desc = "Toggle terminal float" })
+k({ "n", "t" }, "<C-\\>", "<cmd>ToggleTerm direction=float<CR>", { desc = "Toggle terminal float" })
+k({ "n", "t" }, "<M-\\>", "<cmd>ToggleTerm direction=horizontal<CR>", { desc = "Toggle terminal bottom" })
 k("t", "<C-l>", "<C-\\><C-n><C-\\>", { desc = "Terminal in normal mode" })
 
 -- move selection indent mode and up/down
@@ -36,7 +37,7 @@ k("n", "[q", ":cprev<CR>")
 k("n", "<leader>/", "<Plug>(comment_toggle_linewise_current)", { desc = "Comment Toggle" })
 k("x", "<leader>/", "<Plug>(comment_toggle_linewise_visual)", { desc = "Comment Toggle" })
 
-k({ "n", "x" }, "<leader>lt", "<cmd>Vista nvim_lsp<CR>", { desc = "LSP Tagbar" })
+k("n", "<leader>lt", "<cmd>Vista nvim_lsp<CR>", { desc = "LSP Tagbar" })
 k("n", "<F4>", "<cmd>IBLToggle<CR>", { desc = "Toggle indent lines" })
 
 -- search
@@ -48,11 +49,8 @@ k("n", "<leader>sr", "<cmd>Telescope oldfiles<CR>", { desc = "Search recent file
 k("n", "<leader>sb", "<cmd>Telescope buffers<CR>", { desc = "Search in buffers" })
 
 -- test
-k({ "x", "n" }, "<leader>ta", "<cmd>:TestFile<CR>", { desc = "Run full file tests" })
-k({ "x", "n" }, "<leader>ts", "<cmd>:TestNearest<CR>", { desc = "Run current focused test" })
-
--- terminal
-k({ "x", "n" }, "<C-\\>", "<cmd>:ToggleTerm name=floated direction=float<CR>", { desc = "Terminal toggle float" })
+k("n", "<leader>ta", "<cmd>:TestFile<CR>", { desc = "Run full file tests" })
+k("n", "<leader>ts", "<cmd>:TestNearest<CR>", { desc = "Run current focused test" })
 
 -- git
 k("n", "<leader>gg", function()
