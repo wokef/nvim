@@ -27,6 +27,7 @@ return {
   },
   target = "󰀘",
   pipe = "▏",
+  projects = " ",
   search = " ",
   settings = " ",
 }
