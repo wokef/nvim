@@ -15,6 +15,7 @@ vim.opt.foldenable = false
 vim.opt.foldmethod = "indent"
 vim.opt.mouse = "n"
 vim.opt.numberwidth = 4
+vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.smarttab = true
 vim.opt.so = 10 -- line at bottom of cursor line

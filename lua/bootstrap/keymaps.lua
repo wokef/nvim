@@ -42,6 +42,7 @@ k("x", "<leader>/", "<Plug>(comment_toggle_linewise_visual)", { desc = "Comment 
 
 k("n", "<leader>lt", "<cmd>Vista nvim_lsp<CR>", { desc = "LSP Tagbar" })
 k("n", "<F4>", "<cmd>IBLToggle<CR>", { desc = "Toggle indent lines" })
+k("n", "<F5>", "<cmd>set relativenumber!<CR>", { desc = "Toggle relative number" })
 
 -- search
 k("n", "<leader>f", "<cmd>Telescope find_files<CR>", { desc = "Search by filename" })
