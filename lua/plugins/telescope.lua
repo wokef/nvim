@@ -58,21 +58,20 @@ return {
 
     local telescope = require("telescope")
 
-    telescope.setup({
-      defaults = {
-        mappings = {
-          i = {
-            ["<cr>"] = open_selected,
-            ["<C-a>"] = open_all,
-            ["<C-q>"] = to_quick_list,
-          },
-          n = {
-            ["<cr>"] = open_selected,
-            ["<C-a>"] = open_all,
-            ["<C-q>"] = to_quick_list,
-          },
-        },
+    local mappings = {
+      i = {
+        ["<cr>"] = open_selected,
+        ["<C-a>"] = open_all,
+        ["<C-q>"] = to_quick_list,
       },
+      n = {
+        ["<cr>"] = open_selected,
+        ["<C-a>"] = open_all,
+        ["<C-q>"] = to_quick_list,
+      },
+    }
+
+    telescope.setup({
       pickers = {
         find_files = {
           no_ignore = true,
@@ -83,7 +82,12 @@ return {
             -- prompt_position = "top",
           },
           previewer = false,
+          mappings = mappings,
         },
+        current_buffer_fuzzy_find = { mappings = mappings },
+        live_grep = { mappings = mappings },
+        oldfiles = { mappings = mappings },
+        buffers = { mappings = mappings },
         colorscheme = {
           enable_preview = true,
         },
