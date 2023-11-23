@@ -71,23 +71,27 @@ return {
       },
     }
 
+    local no_preview_settings = {
+      no_ignore = true,
+      hidden = true,
+      layout_strategy = "vertical",
+      -- sorting_strategy = "ascending",
+      layout_config = {
+        -- prompt_position = "top",
+      },
+      previewer = false,
+      mappings = mappings,
+    }
+
     telescope.setup({
       pickers = {
-        find_files = {
-          no_ignore = true,
-          hidden = true,
-          layout_strategy = "vertical",
-          -- sorting_strategy = "ascending",
-          layout_config = {
-            -- prompt_position = "top",
-          },
-          previewer = false,
-          mappings = mappings,
-        },
+        find_files = no_preview_settings,
+        git_files = no_preview_settings,
+        buffers = no_preview_settings,
+        oldfiles = no_preview_settings,
         current_buffer_fuzzy_find = { mappings = mappings },
         live_grep = { mappings = mappings },
-        oldfiles = { mappings = mappings },
-        buffers = { mappings = mappings },
+        git_status = { mappings = mappings },
         colorscheme = {
           enable_preview = true,
         },
