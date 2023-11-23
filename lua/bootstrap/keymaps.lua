@@ -1,7 +1,7 @@
 local k = vim.keymap.set
 
 k("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "No highlight" })
-k("n", "<leader>q", "<cmd>:q<CR>", { desc = "Quit" })
+k("n", "<leader>q", "<cmd>:confirm q<CR>", { desc = "Quit" })
 k("n", "<leader>w", "<cmd>:w<CR>", { desc = "Write" })
 k("n", "<leader>W", "<cmd>noautocmd w<cr>", { desc = "Save without formatting (noautocmd)" })
 k("n", "<leader>c", "<cmd>:BufferKill<CR>", { desc = "Close buffer" })
@@ -45,6 +45,7 @@ k("n", "<F4>", "<cmd>IBLToggle<CR>", { desc = "Toggle indent lines" })
 k("n", "<F5>", "<cmd>set relativenumber!<CR>", { desc = "Toggle relative number" })
 
 -- search
+k("n", "<leader>F", "<cmd>Telescope git_files<CR>", { desc = "Search by project filename" })
 k("n", "<leader>f", "<cmd>Telescope find_files<CR>", { desc = "Search by filename" })
 k("n", "<leader>sf", "<cmd>Telescope find_files<CR>", { desc = "Search by filename" })
 k("n", "<leader>sl", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Search in file lines" })
