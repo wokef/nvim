@@ -44,6 +44,7 @@ return {
         end
 
         vim.cmd(string.format("%s %s", ":e!", entryName))
+        vim.cmd("stopinsert")
       end
 
       vim.cmd("stopinsert")
@@ -83,15 +84,20 @@ return {
       mappings = mappings,
     }
 
+    local preview_settings = {
+      mappings = mappings,
+    }
+
     telescope.setup({
+      preview = { filesize_limit = 1 },
       pickers = {
         find_files = no_preview_settings,
         git_files = no_preview_settings,
         buffers = no_preview_settings,
         oldfiles = no_preview_settings,
-        current_buffer_fuzzy_find = { mappings = mappings },
-        live_grep = { mappings = mappings },
-        git_status = { mappings = mappings },
+        current_buffer_fuzzy_find = preview_settings,
+        live_grep = preview_settings,
+        git_status = preview_settings,
         colorscheme = {
           enable_preview = true,
         },

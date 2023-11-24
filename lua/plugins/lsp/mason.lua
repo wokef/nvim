@@ -26,6 +26,7 @@ return {
         "pint",
         "prettier",
         "stylua",
+        "sql-formatter",
       },
     })
   end,

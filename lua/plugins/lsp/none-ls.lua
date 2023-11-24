@@ -16,6 +16,7 @@ return {
         "pint",
         "prettier",
         "stylua",
+        "sql-formatter",
       },
     })
 
@@ -40,6 +41,9 @@ return {
             "--config",
             lsp_config("prettier"),
           },
+        }),
+        formatting.sql_formatter.with({
+          extra_filetypes = { "mysql" },
         }),
         formatting.stylua,
         diagnostics.eslint_d,
