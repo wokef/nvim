@@ -3,11 +3,10 @@ return {
   event = "VeryLazy",
   opts = {
     messages = {
-      view = false,
-      view_error = false,
-      view_warn = false,
-      view_history = false,
-      view_search = false,
+      view = "mini",
+      view_error = "mini",
+      view_warn = "mini",
+      view_history = "mini",
     },
     lsp = {
       progress = { enabled = false },
