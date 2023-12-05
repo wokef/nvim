@@ -89,14 +89,20 @@ return {
     }
 
     telescope.setup({
-      preview = { filesize_limit = 1 },
       pickers = {
         find_files = no_preview_settings,
         git_files = no_preview_settings,
         buffers = no_preview_settings,
         oldfiles = no_preview_settings,
         current_buffer_fuzzy_find = preview_settings,
-        live_grep = preview_settings,
+        live_grep = {
+          mappings = mappings,
+          file_ignore_patterns = { "node%_modules/.*", "vendor/*" },
+        },
+        lsp_references = {
+          mappings = mappings,
+          show_line = false,
+        },
         git_status = preview_settings,
         colorscheme = {
           enable_preview = true,
