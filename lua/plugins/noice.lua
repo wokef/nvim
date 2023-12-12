@@ -3,6 +3,7 @@ return {
   event = "VeryLazy",
   opts = {
     messages = {
+      enabled = false,
       view = "mini",
       view_error = "mini",
       view_warn = "mini",
