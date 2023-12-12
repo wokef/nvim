@@ -40,6 +40,9 @@ k("n", "[q", ":cprev<CR>")
 k("n", "<leader>/", "<Plug>(comment_toggle_linewise_current)", { desc = "Comment Toggle" })
 k("x", "<leader>/", "<Plug>(comment_toggle_linewise_visual)", { desc = "Comment Toggle" })
 
+k("n", "<leader>?", "<Plug>(comment_toggle_blockwise_current)", { desc = "Comment Toggle Block" })
+k("x", "<leader>?", "<Plug>(comment_toggle_blockwise_visual)", { desc = "Comment Toggle Block" })
+
 k("n", "<leader>lt", "<cmd>Vista nvim_lsp<CR>", { desc = "LSP Tagbar" })
 k("n", "<F4>", "<cmd>IBLToggle<CR>", { desc = "Toggle indent lines" })
 k("n", "<F5>", "<cmd>set relativenumber!<CR>", { desc = "Toggle relative number" })
