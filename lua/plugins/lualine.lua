@@ -22,7 +22,8 @@ return {
           color = { gui = "bold" },
         },
       },
-      lualine_c = {
+      lualine_c = {},
+      lualine_x = {
         {
           "diff",
           source = function()
@@ -42,8 +43,6 @@ return {
           },
           padding = { left = 2, right = 1 },
         },
-      },
-      lualine_x = {
         {
           "diagnostics",
           sources = { "nvim_diagnostic" },
@@ -95,6 +94,15 @@ return {
       lualine_y = { "progress" },
       lualine_z = { "location" },
     }
+
+    table.insert(sections.lualine_b, {
+      function()
+        return require("nvim-navic").get_location()
+      end,
+      cond = function()
+        return package.loaded["nvim-navic"] and require("nvim-navic").is_available()
+      end,
+    })
 
     local config = {
       options = {

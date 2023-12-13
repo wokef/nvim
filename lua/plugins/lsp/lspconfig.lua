@@ -10,7 +10,7 @@ return {
     local lspconfig = require("lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
-    local on_attach = function(_, bufnr)
+    local on_attach = function(client, bufnr)
       local k = vim.keymap.set
 
       local opts = function(desc)
@@ -20,6 +20,10 @@ return {
           buffer = bufnr,
           desc = desc,
         }
+      end
+
+      if client.supports_method("textDocument/documentSymbol") then
+        require("nvim-navic").attach(client, bufnr)
       end
 
       k("n", "gr", "<cmd>Telescope lsp_references<CR>", opts("Show LSP references"))
