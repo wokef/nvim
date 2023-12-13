@@ -43,6 +43,10 @@ return {
           },
         }),
         formatting.sql_formatter.with({
+          extra_args = {
+            "--config",
+            lsp_config("sql-formatter"),
+          },
           extra_filetypes = { "mysql" },
         }),
         formatting.stylua,
