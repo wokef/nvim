@@ -6,7 +6,7 @@ return {
   main = "ibl",
   opts = {
     indent = {
-      char = icons.pipe,
+      char = icons.lineLeft,
     },
     whitespace = {
       remove_blankline_trail = false,
