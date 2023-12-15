@@ -90,8 +90,18 @@ return {
           color = { gui = "bold" },
         },
         "filetype",
+        {
+          function()
+            local shiftwidth = vim.api.nvim_buf_get_option(0, "shiftwidth")
+            return icons.tab .. " " .. shiftwidth
+          end,
+          padding = 1,
+        },
       },
-      lualine_y = { "progress" },
+      lualine_y = {
+        -- "progress"
+        "encoding",
+      },
       lualine_z = { "location" },
     }
 
@@ -135,8 +145,8 @@ return {
         },
         globalstatus = true,
         icons_enabled = true,
-        component_separators = { left = "", right = "" },
-        section_separators = { left = "", right = "" },
+        component_separators = { left = icons.boldLineLeft, right = "" },
+        section_separators = { left = icons.boldLineLeft, right = "" },
         disabled_filetypes = { "alpha" },
       },
       sections = sections,
