@@ -1,6 +1,7 @@
 return {
   arrows = {
     circleRight = " ",
+    chevronRight = "",
   },
   close = " ",
   code = " ",
@@ -26,8 +27,11 @@ return {
     Info = " ",
   },
   target = "󰀘",
-  pipe = "▏",
+  lineLeft = "▏",
+  boldLineLeft = "▎",
+  boldLineRight = "▐",
   projects = " ",
   search = " ",
   settings = " ",
+  tab = "󰌒 ",
 }
