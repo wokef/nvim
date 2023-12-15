@@ -103,6 +103,10 @@ return {
           mappings = mappings,
           show_line = false,
         },
+        lsp_implementations = {
+          mappings = mappings,
+          show_line = false,
+        },
         git_status = preview_settings,
         colorscheme = {
           enable_preview = true,
