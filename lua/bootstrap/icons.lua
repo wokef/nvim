@@ -25,6 +25,7 @@ return {
     Warn = " ",
     Hint = "󰠠 ",
     Info = " ",
+    Off = " ",
   },
   target = "󰀘",
   lineLeft = "▏",

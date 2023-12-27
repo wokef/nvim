@@ -57,7 +57,7 @@ return {
           function()
             local buf_clients = vim.lsp.get_active_clients({ bufnr = 0 })
             if #buf_clients == 0 then
-              return "LSP Inactive"
+              return icons.lsp.Off .. " Lsp Off"
             end
 
             local buf_ft = vim.bo.filetype
