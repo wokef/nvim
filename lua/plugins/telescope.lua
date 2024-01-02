@@ -24,9 +24,10 @@ return {
     local function open_selected(prompt_bufnr)
       local picker = action_state.get_current_picker(prompt_bufnr)
       local num_selections = #picker:get_multi_selection()
-      actions.select_default(prompt_bufnr)
 
       if num_selections > 1 then
+        actions.select_default(prompt_bufnr)
+
         for _, entry in pairs(picker:get_multi_selection()) do
           open_entry(entry)
         end
