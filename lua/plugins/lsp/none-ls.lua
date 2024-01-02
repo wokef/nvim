@@ -50,6 +50,7 @@ return {
           extra_filetypes = { "mysql" },
         }),
         formatting.stylua,
+        formatting.blade_formatter,
         diagnostics.eslint_d,
       },
       -- configure format on save
