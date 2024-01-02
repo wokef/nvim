@@ -55,7 +55,7 @@ return {
         },
         {
           function()
-            local buf_clients = vim.lsp.get_active_clients({ bufnr = 0 })
+            local buf_clients = vim.lsp.get_clients({ bufnr = 0 })
             if #buf_clients == 0 then
               return icons.lsp.Off .. " Lsp Off"
             end
@@ -92,7 +92,8 @@ return {
         "filetype",
         {
           function()
-            local shiftwidth = vim.api.nvim_buf_get_option(0, "shiftwidth")
+            local shiftwidth = vim.api.nvim_get_option_value("shiftwidth", { buf = 0 })
+
             return icons.tab .. " " .. shiftwidth
           end,
           padding = 1,

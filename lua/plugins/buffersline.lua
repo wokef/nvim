@@ -1,3 +1,5 @@
+local icon = require("bootstrap.icons")
+
 return {
   "akinsho/bufferline.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -10,7 +12,7 @@ return {
       max_name_length = 50,
       separator_style = { "", "" },
       indicator = {
-        icon = "▍",
+        icon = icon.extraBoldLineLeft,
         style = "icon",
       },
       diagnostics = "nvim_lsp",

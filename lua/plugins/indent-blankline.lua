@@ -1,4 +1,4 @@
-local icons = require("../bootstrap/icons")
+local icons = require("bootstrap.icons")
 
 return {
   "lukas-reineke/indent-blankline.nvim",

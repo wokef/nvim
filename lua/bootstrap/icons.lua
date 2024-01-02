@@ -30,6 +30,7 @@ return {
   target = "󰀘",
   lineLeft = "▏",
   boldLineLeft = "▎",
+  extraBoldLineLeft = "▍",
   boldLineRight = "▐",
   projects = " ",
   search = " ",
