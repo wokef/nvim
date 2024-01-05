@@ -41,6 +41,7 @@ return {
             "--config",
             lsp_config("prettier"),
           },
+          extra_filetypes = { "xml" },
         }),
         formatting.sql_formatter.with({
           extra_args = {
@@ -62,9 +63,9 @@ return {
             buffer = bufnr,
             callback = function()
               vim.lsp.buf.format({
-                filter = function(client)
-                  return client.name == "null-ls"
-                end,
+                -- filter = function(client)
+                --   return client.name == "null-ls"
+                -- end,
                 bufnr = bufnr,
               })
             end,

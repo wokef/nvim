@@ -55,6 +55,7 @@ return {
     lspconfig["jsonls"].setup({ capabilities = capabilities, on_attach = on_attach })
     lspconfig["phpactor"].setup({ capabilities = capabilities, on_attach = on_attach })
     lspconfig["tsserver"].setup({ capabilities = capabilities, on_attach = on_attach })
+    lspconfig["lemminx"].setup({ capabilities = capabilities, on_attach = on_attach })
 
     lspconfig["lua_ls"].setup({
       capabilities = capabilities,
