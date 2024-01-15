@@ -4,10 +4,11 @@ return {
   opts = {
     messages = {
       enabled = false,
-      view = "mini",
-      view_error = "mini",
-      view_warn = "mini",
-      view_history = "mini",
+      view = "cmdline",
+      view_error = "cmdline",
+      view_warn = "cmdline",
+      view_history = "messages",
+      view_search = false,
     },
     lsp = {
       progress = { enabled = false },
