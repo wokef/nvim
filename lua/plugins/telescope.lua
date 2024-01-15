@@ -82,6 +82,8 @@ return {
       sorting_strategy = "ascending",
       layout_config = {
         prompt_position = "top",
+        width = 0.99,
+        height = 0.99,
       },
       mappings = mappings,
       file_ignore_patterns = { "node%_modules/.*", "vendor/*" },
