@@ -6,6 +6,7 @@ return {
   close = " ",
   code = " ",
   download = " ",
+  github = " ",
   files = {
     new = " ",
     find = "󰱼 ",

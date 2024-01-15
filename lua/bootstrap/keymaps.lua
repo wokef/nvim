@@ -62,25 +62,7 @@ k("n", "<leader>ta", "<cmd>:TestFile<CR>", { desc = "Run full file tests" })
 k("n", "<leader>ts", "<cmd>:TestNearest<CR>", { desc = "Run current focused test" })
 
 -- git
-k("n", "<leader>gg", function()
-  local Terminal = require("toggleterm.terminal").Terminal
-  local lazygit = Terminal:new({
-    cmd = "lazygit",
-    hidden = true,
-    direction = "float",
-    float_opts = {
-      border = "none",
-      width = 100000,
-      height = 100000,
-    },
-    on_open = function(_)
-      vim.cmd("startinsert!")
-    end,
-    on_close = function(_) end,
-    count = 99,
-  })
-  lazygit:toggle()
-end, { desc = "Lazygit" })
+k("n", "<leader>gg", "<cmd>:LazyGit<CR>", { desc = "Lazygit" })
 k("n", "<leader>gf", "<cmd>G<cr>", { desc = "Fugitive" })
 k("n", "<leader>gj", "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>", { desc = "Next Hunk" })
 k("n", "<leader>gk", "<cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>", { desc = "Prev Hunk" })

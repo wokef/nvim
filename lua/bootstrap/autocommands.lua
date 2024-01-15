@@ -12,6 +12,10 @@ vim.api.nvim_create_user_command("BufferKill", function()
   require("bootstrap.common").buf_kill("bd")
 end, {})
 
+vim.api.nvim_create_user_command("LazyGit", function()
+  require("bootstrap.common").lazy_git()
+end, {})
+
 vim.api.nvim_command([[set clipboard+=unnamedplus]])
 vim.g.clipboard = {
   name = "myClipboard",

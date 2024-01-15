@@ -21,6 +21,7 @@ return {
       dashboard.button("P", icons.projects .. " Projects", "<cmd>Telescope projects<CR>"),
       dashboard.button("p", icons.download .. " Plugins manager", "<cmd>Lazy<CR>"),
       dashboard.button("c", icons.settings .. " Configuration", "<cmd>e $MYVIMRC<BAR>cd $HOME/.config/nvim<CR>"),
+      dashboard.button("G", icons.github .. " Lazy Git", "<cmd>LazyGit<CR>"),
       dashboard.button("q", icons.close .. " Quit", "<cmd>qa<CR>"),
     }
 
