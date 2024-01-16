@@ -27,6 +27,18 @@ k({ "n", "t" }, "<C-\\>", "<cmd>ToggleTerm direction=float<CR>", { desc = "Toggl
 k({ "n", "t" }, "<M-\\>", "<cmd>ToggleTerm direction=horizontal<CR>", { desc = "Toggle terminal bottom" })
 k("t", "<C-l>", "<C-\\><C-n><C-\\>", { desc = "Terminal in normal mode" })
 
+-- resize
+k({ "n", "x" }, "<C-M-Up>", ":resize +2<CR>", { desc = "Resize window" })
+k({ "n", "x" }, "<C-M-Right>", ":vertical resize +2<CR>", { desc = "Resize window" })
+k({ "n", "x" }, "<C-M-Down>", ":resize -2<CR>", { desc = "Resize window" })
+k({ "n", "x" }, "<C-M-Left>", ":vertical resize -2<CR>", { desc = "Resize window" })
+
+-- navigation
+k({ "n", "x" }, "<M-Up>", "<C-w>k", { desc = "Navigate window" })
+k({ "n", "x" }, "<M-Right>", "<C-w>l", { desc = "Navigate window" })
+k({ "n", "x" }, "<M-Down>", "<C-w>j", { desc = "Navigate window" })
+k({ "n", "x" }, "<M-Left>", "<C-w>h", { desc = "Navigate window" })
+
 -- move selection indent mode and up/down
 k("v", "<", "<gv")
 k("v", ">", ">gv")
