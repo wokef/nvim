@@ -12,13 +12,19 @@ return {
     local action_state = require("telescope.actions.state")
 
     local function open_entry(entry)
-      local entryName = entry.value:match("(.*):[0-9]+:[0-9]+")
+      local entryName = entry.filename
 
       if entryName == nil then
         entryName = entry.value
       end
 
-      vim.cmd(string.format("%s %s", ":e!", entryName))
+      local entryFileName = entryName:match("(.*):[0-9]+:[0-9]+")
+
+      if entryFileName == nil then
+        entryFileName = entryName
+      end
+
+      vim.cmd(string.format("%s %s", ":e!", entryFileName))
     end
 
     local function open_selected(prompt_bufnr)
