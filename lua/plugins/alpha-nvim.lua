@@ -7,12 +7,12 @@ return {
 
     dashboard.section.header.highlight = "string"
     dashboard.section.header.opts.hl = "AlphaHeader"
-    dashboard.section.header.val = {
-      "             ▖     ",
-      "┌─╮╭─╮╭─╮▖  ▖▖▄▄▗▄ ",
-      "│ │├─┘│ │▝▖▞ ▌▌ ▌ ▌",
-      "╵ ╵╰─╯╰─╯ ▝  ▘▘ ▘ ▘",
-    }
+    -- dashboard.section.header.val = {
+    --   "             ▖     ",
+    --   "┌─╮╭─╮╭─╮▖  ▖▖▄▄▗▄ ",
+    --   "│ │├─┘│ │▝▖▞ ▌▌ ▌ ▌",
+    --   "╵ ╵╰─╯╰─╯ ▝  ▘▘ ▘ ▘",
+    -- }
 
     dashboard.section.buttons.val = {
       dashboard.button("n", icons.files.new .. " New File", "<cmd>ene<CR>"),
