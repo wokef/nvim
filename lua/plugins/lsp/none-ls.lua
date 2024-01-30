@@ -66,6 +66,7 @@ return {
                 -- filter = function(client)
                 --   return client.name == "null-ls"
                 -- end,
+                timeout_ms = 3000,
                 bufnr = bufnr,
               })
             end,
