@@ -107,6 +107,7 @@ return {
         lsp_references = preview_settings,
         lsp_implementations = preview_settings,
         git_status = preview_settings,
+        quickfix = preview_settings,
         colorscheme = {
           enable_preview = true,
         },
