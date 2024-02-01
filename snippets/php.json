@@ -1,0 +1,25 @@
+{
+    "Protected function": {
+        "prefix": "fn",
+        "body": [
+            "/**",
+            " * ${1:undocumented function}",
+            " */",
+            "${2:public} function ${3:name}(${5}): ${4:void}",
+            "{",
+            "\t${6://}",
+            "}"
+        ],
+        "description": "Class function"
+    },
+    "Variable": {
+        "prefix": "var",
+        "body": [
+            "/**",
+            " * ${1:Description}",
+            " */",
+            "${2:public} ${3:string} ${5:\\$name};"
+        ],
+        "description": "Class variable function"
+    }
+}

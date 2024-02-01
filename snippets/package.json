@@ -1,0 +1,27 @@
+{
+    "name": "snippets",
+    "author": "wokef",
+    "engines": {
+        "vscode": "^1.11.0"
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": "blade",
+                "path": "./blade.json"
+            },
+            {
+                "language": "blade",
+                "path": "./laravel-helpers.json"
+            },
+            {
+                "language": "php",
+                "path": "./php.json"
+            },
+            {
+                "language": "vue",
+                "path": "./vue.json"
+            }
+        ]
+    }
+}

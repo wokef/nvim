@@ -12,9 +12,12 @@ return {
   config = function()
     local cmp = require("cmp")
     local luasnip = require("luasnip")
+    local snippet_path = require("bootstrap.common").config_path() .. "/snippets/"
     local lspkind = require("lspkind")
 
-    require("luasnip.loaders.from_vscode").lazy_load()
+    local snipper_loader = require("luasnip.loaders.from_vscode").lazy_load
+    snipper_loader()
+    snipper_loader({ paths = { snippet_path } })
 
     local style = cmp.config.window.bordered()
     style.winhighlight = "FloatBorder:FloatBorder"
