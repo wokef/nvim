@@ -1,7 +1,11 @@
 local M = {}
 
+function M.config_path()
+  return vim.fn.expand("$HOME") .. "/.config/nvim"
+end
+
 function M.lsp_config(file)
-  return vim.fn.expand("$HOME") .. "/.config/nvim/lua/plugins/lsp/settings/" .. file .. ".json"
+  return M.config_path() .. "/lua/plugins/lsp/settings/" .. file .. ".json"
 end
 
 function M.buf_kill(kill_command, bufnr, force)
