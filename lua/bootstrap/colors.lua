@@ -19,4 +19,5 @@ return {
   red_dark = "#53143f",
   white = "#ffffff",
   yellow = "#f1f18c",
+  yellow_dark = "#fed828",
 }
