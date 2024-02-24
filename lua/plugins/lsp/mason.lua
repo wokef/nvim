@@ -16,6 +16,7 @@ return {
         "phpactor",
         "tailwindcss",
         "tsserver",
+        "volar",
       },
       automatic_installation = true,
     })
