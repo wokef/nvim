@@ -54,8 +54,8 @@ return {
     lspconfig["emmet_ls"].setup({ capabilities = capabilities, on_attach = on_attach })
     lspconfig["jsonls"].setup({ capabilities = capabilities, on_attach = on_attach })
     lspconfig["phpactor"].setup({ capabilities = capabilities, on_attach = on_attach })
-    lspconfig["tsserver"].setup({ capabilities = capabilities, on_attach = on_attach })
     lspconfig["lemminx"].setup({ capabilities = capabilities, on_attach = on_attach })
+    -- lspconfig["vls"].setup({ capabilities = capabilities, on_attach = on_attach })
 
     lspconfig["lua_ls"].setup({
       capabilities = capabilities,
@@ -75,15 +75,15 @@ return {
       },
     })
 
+    lspconfig["tsserver"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      filetypes = { "typescript", "javascript", "vue" },
+    })
+
     lspconfig["volar"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      init_options = {
-        typescript = {
-          tsdk = vim.fn.expand("$HOME")
-            .. "/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib",
-        },
-      },
     })
   end,
 }
