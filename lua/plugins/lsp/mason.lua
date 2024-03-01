@@ -23,7 +23,6 @@ return {
 
     require("mason-tool-installer").setup({
       ensure_installed = {
-        "eslint_d",
         "pint",
         "prettier",
         "stylua",

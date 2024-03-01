@@ -12,7 +12,6 @@ return {
 
     mason_null_ls.setup({
       ensure_installed = {
-        "eslint_d",
         "pint",
         "prettier",
         "stylua",
@@ -52,7 +51,6 @@ return {
         }),
         formatting.stylua,
         formatting.blade_formatter,
-        diagnostics.eslint_d,
       },
       -- configure format on save
       on_attach = function(current_client, bufnr)
