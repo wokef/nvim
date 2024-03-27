@@ -78,12 +78,17 @@ return {
     lspconfig["tsserver"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      filetypes = { "typescript", "javascript", "vue" },
+      filetypes = { "typescript", "javascript" },
     })
 
     lspconfig["volar"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
+      init_options = {
+        vue = {
+          hybridMode = false,
+        },
+      },
     })
   end,
 }
