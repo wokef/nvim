@@ -6,11 +6,13 @@ return {
     local icons = require("bootstrap.icons")
     local colors = require("bootstrap.colors")
 
-    local text_dark = { bg = colors.black, fg = colors.normal }
+    local bg = "#011423"
+
+    local text_dark = { bg = bg, fg = colors.normal }
     local text_light = { bg = colors.black_light, fg = colors.grey_light }
     local inactive = { bg = colors.black_light, fg = colors.grey, gui = "" }
     local insert_a = { bg = colors.fuksia, fg = colors.white, gui = "" }
-    local normal_a = { bg = colors.cyan, fg = colors.black, gui = "" }
+    local normal_a = { bg = colors.cyan, fg = bg, gui = "" }
     local visual_a = { bg = colors.orange, fg = colors.white, giu = "" }
 
     local sections = {
