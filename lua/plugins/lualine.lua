@@ -67,22 +67,22 @@ return {
             local buf_client_names = { icons.target }
 
             for _, client in pairs(buf_clients) do
-              if client.name ~= "null-ls" and client.name ~= "copilot" then
+              if client.name ~= "copilot" then
                 table.insert(buf_client_names, client.name)
               end
             end
 
-            local sources = require("null-ls.sources")
-            local available = sources.get_available(buf_ft)
+            -- local sources = require("masonnull-ls.sources")
+            -- local available = sources.get_available(buf_ft)
 
-            for _, source in ipairs(available) do
-              for _ in pairs(source.methods) do
-                if registered[source.name] == nil then
-                  registered[source.name] = true
-                  table.insert(buf_client_names, source.name)
-                end
-              end
-            end
+            -- for _, source in ipairs(available) do
+            --   for _ in pairs(source.methods) do
+            --     if registered[source.name] == nil then
+            --       registered[source.name] = true
+            --       table.insert(buf_client_names, source.name)
+            --     end
+            --   end
+            -- end
 
             local unique_client_names = table.concat(buf_client_names, ", ")
             local language_servers = string.format("%s", unique_client_names)
