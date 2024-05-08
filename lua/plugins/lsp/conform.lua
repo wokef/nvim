@@ -13,6 +13,7 @@ return {
         html = { "prettier" },
         json = { "prettier" },
         yaml = { "prettier" },
+        vue = { "prettier" },
         markdown = { "prettier" },
         lua = { "stylua" },
         php = { "pint" },
