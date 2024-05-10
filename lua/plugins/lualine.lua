@@ -62,32 +62,30 @@ return {
               return icons.lsp.Off .. " Lsp Off"
             end
 
-            local buf_ft = vim.bo.filetype
-            local registered = {}
             local buf_client_names = { icons.target }
-
             for _, client in pairs(buf_clients) do
               if client.name ~= "copilot" then
                 table.insert(buf_client_names, client.name)
               end
             end
 
-            -- local sources = require("masonnull-ls.sources")
-            -- local available = sources.get_available(buf_ft)
+            local lsp_format = require("conform.lsp_format")
+            local lsp_clients = lsp_format.get_format_clients(buf_clients)
+            for _, client in pairs(lsp_clients) do
+              if not vim.tbl_contains(buf_client_names, client.name) then
+                table.insert(buf_client_names, client.name)
+              end
+            end
 
-            -- for _, source in ipairs(available) do
-            --   for _ in pairs(source.methods) do
-            --     if registered[source.name] == nil then
-            --       registered[source.name] = true
-            --       table.insert(buf_client_names, source.name)
-            --     end
-            --   end
-            -- end
+            local conform = require("conform")
+            local buf_formatters = conform.list_formatters()
+            for _, client in pairs(buf_formatters) do
+              if not vim.tbl_contains(buf_client_names, client.name) then
+                table.insert(buf_client_names, client.name)
+              end
+            end
 
-            local unique_client_names = table.concat(buf_client_names, ", ")
-            local language_servers = string.format("%s", unique_client_names)
-
-            return language_servers
+            return string.format("%s", table.concat(buf_client_names, ", "))
           end,
           color = { gui = "bold" },
         },
