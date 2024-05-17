@@ -18,14 +18,26 @@ end, {})
 
 vim.api.nvim_command([[set clipboard+=unnamedplus]])
 vim.g.clipboard = {
-  name = "myClipboard",
+  name = "win32yank-wsl",
   copy = {
-    ["+"] = "clip.exe",
-    ["*"] = "clip.exe",
+    ["+"] = "/mnt/c/win32yank.exe -i --crlf",
+    ["*"] = "/mnt/c/win32yank.exe -i --crlf",
   },
   paste = {
-    ["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-    ["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    ["+"] = "/mnt/c/win32yank.exe -o --lf",
+    ["*"] = "/mnt/c/win32yank.exe -o --lf",
   },
   cache_enabled = false,
 }
+-- vim.g.clipboard = {
+--   name = "myClipboard",
+--   copy = {
+--     ["+"] = "clip.exe",
+--     ["*"] = "clip.exe",
+--   },
+--   paste = {
+--     ["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+--     ["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+--   },
+--   cache_enabled = false,
+-- }
