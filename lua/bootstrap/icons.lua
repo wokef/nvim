@@ -20,6 +20,7 @@ return {
     linesChanged = " ",
     linesRemoved = " ",
   },
+  half_life = "󰘧",
   history = " ",
   lsp = {
     Error = " ",
