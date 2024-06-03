@@ -69,6 +69,7 @@ k("n", "<leader>sr", "<cmd>Telescope oldfiles<CR>", { desc = "Search recent file
 k("n", "<leader>sb", "<cmd>Telescope buffers<CR>", { desc = "Search in buffers" })
 k("n", "<leader>sp", "<cmd>Telescope projects<CR>", { desc = "Search projects" })
 k("n", "<leader>sq", "<cmd>Telescope quickfix<CR>", { desc = "Search in quickfix" })
+k("n", "<leader>sd", "<cmd>Telescope diagnostics<CR>", { desc = "Search through diagnostics messages" })
 
 -- test
 k("n", "<leader>ta", "<cmd>:TestFile<CR>", { desc = "Run full file tests" })
