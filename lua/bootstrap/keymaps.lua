@@ -14,7 +14,7 @@ k("n", "<leader>;", "<cmd>:Alpha<CR>", { desc = "Dashboard" })
 k("n", "<leader>lm", "<cmd>:Mason<CR>", { desc = "Mason" })
 k("n", "<leader>pm", "<cmd>:Lazy<CR>", { desc = "Lazy manager" })
 k("n", "<leader>pd", "<cmd>:DBUIToggle<CR>", { desc = "Database UI" })
-k("n", "<leader>pn", "<cmd>:Note<CR>", { desc = "Take notes" })
+k("n", "<leader>pn", "<cmd>:ObsidianSearch<CR>", { desc = "Notes Obsidian" })
 k("n", "<leader>H", "<cmd>:Inspect<cr>", { desc = "Inspect highlight under cursor" })
 
 k("n", "ss", ":split<CR>", { desc = "Split Horizontal" })
