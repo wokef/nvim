@@ -5,6 +5,7 @@ return {
   },
   close = " ",
   code = " ",
+  database = " ",
   download = " ",
   github = " ",
   files = {
