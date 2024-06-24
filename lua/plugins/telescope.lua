@@ -103,6 +103,7 @@ return {
         buffers = no_preview_settings,
         oldfiles = no_preview_settings,
         current_buffer_fuzzy_find = preview_settings,
+        grep_string = preview_settings,
         diagnostics = preview_settings,
         live_grep = preview_settings,
         lsp_references = preview_settings,
