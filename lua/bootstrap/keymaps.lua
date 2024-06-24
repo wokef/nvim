@@ -75,8 +75,8 @@ k("n", "<leader>sq", "<cmd>Telescope quickfix<CR>", { desc = "Search in quickfix
 k("n", "<leader>sd", "<cmd>Telescope diagnostics<CR>", { desc = "Search through diagnostics messages" })
 
 -- test
-k("n", "<leader>ta", "<cmd>:TestFile<CR>", { desc = "Run full file tests" })
-k("n", "<leader>ts", "<cmd>:TestNearest<CR>", { desc = "Run current focused test" })
+k("n", "<leader>T", "<cmd>:TestFile<CR>", { desc = "Run full file tests" })
+k("n", "<leader>t", "<cmd>:TestNearest<CR>", { desc = "Run current focused test" })
 
 -- git
 k("n", "<leader>G", "<cmd>:LazyGit<CR>", { desc = "Lazygit" })
