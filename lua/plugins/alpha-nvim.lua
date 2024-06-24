@@ -44,6 +44,7 @@ return {
       dashboard.button("m", icons.target .. "  Lsp manager", "<cmd>Mason<CR>"),
       dashboard.button("c", icons.half_life .. " Configuration", "<cmd>e $MYVIMRC<BAR>cd $HOME/.config/nvim<CR>"),
       dashboard.button("g", icons.github .. " Lazy Git", "<cmd>LazyGit<CR>"),
+      dashboard.button("d", icons.database .. " DB UI", "<cmd>DBUI<CR><cmd>on<CR>"),
       dashboard.button("q", icons.close .. " Quit", "<cmd>qa<CR>"),
     }
 
