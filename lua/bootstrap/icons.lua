@@ -32,6 +32,7 @@ return {
   },
   target = "󰀘",
   lineLeft = "▏",
+  note = "󱘓 ",
   boldLineLeft = "▎",
   extraBoldLineLeft = "▍",
   boldLineRight = "▐",

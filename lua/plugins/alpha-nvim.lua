@@ -45,6 +45,7 @@ return {
       dashboard.button("c", icons.half_life .. " Configuration", "<cmd>e $MYVIMRC<BAR>cd $HOME/.config/nvim<CR>"),
       dashboard.button("g", icons.github .. " Lazy Git", "<cmd>LazyGit<CR>"),
       dashboard.button("d", icons.database .. " DB UI", "<cmd>DBUI<CR><cmd>on<CR>"),
+      dashboard.button("N", icons.note .. " Obsidian Note Keeper", "<cmd>ObsidianSearch<CR>"),
       dashboard.button("q", icons.close .. " Quit", "<cmd>qa<CR>"),
     }
 
