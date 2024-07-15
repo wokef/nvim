@@ -7,20 +7,21 @@ return {
     local which_key = require("which-key")
 
     which_key.setup({
-      window = {
+      win = {
         border = "single",
       },
     })
 
-    which_key.register({
-      b = { name = "Buffer" },
-      g = { name = "Git" },
-      l = { name = "LSP" },
-      p = { name = "Plugins" },
-      s = { name = "Search" },
-      t = { name = "Test" },
-    }, {
-      prefix = "<leader>",
+    which_key.add({
+      { "<leader>b", group = "Buffer" },
+      { "<leader>g", group = "Git" },
+      { "<leader>l", group = "LSP" },
+      { "<leader>p", group = "Plugins" },
+      { "<leader>s", group = "Search" },
+      { "<leader>t", group = "Test" },
     })
   end,
+  dependencies = {
+    "echasnovski/mini.icons",
+  },
 }
