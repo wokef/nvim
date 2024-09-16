@@ -15,7 +15,7 @@ return {
         "lua_ls",
         "phpactor",
         "tailwindcss",
-        "tsserver",
+        "ts_ls",
         "volar",
       },
       automatic_installation = true,

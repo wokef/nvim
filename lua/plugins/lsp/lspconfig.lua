@@ -80,8 +80,8 @@ return {
           filetypes = { "blade", "html", "markdown", "twig", "css", "less", "postcss", "sass", "scss", "stylus", "vue" },
         })
       end,
-      ["tsserver"] = function()
-        lspconfig["tsserver"].setup({
+      ["ts_ls"] = function()
+        lspconfig["ts_ls"].setup({
           capabilities = capabilities,
           filetypes = { "typescript", "javascript" },
         })
@@ -92,6 +92,9 @@ return {
           init_options = {
             vue = {
               hybridMode = false,
+            },
+            typescript = {
+              tsdk = "/home/marco/.nvm/versions/node/v20.3.1/lib/node_modules/typescript/lib/",
             },
           },
         })
