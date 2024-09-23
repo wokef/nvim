@@ -42,7 +42,7 @@ return {
       dashboard.button("P", icons.projects .. " Projects", "<cmd>Telescope projects<CR>"),
       dashboard.button("p", icons.download .. " Plugins manager", "<cmd>Lazy<CR>"),
       dashboard.button("m", icons.target .. "  Lsp manager", "<cmd>Mason<CR>"),
-      dashboard.button("c", icons.half_life .. " Configuration", "<cmd>e $MYVIMRC<BAR>cd $HOME/.config/nvim<CR>"),
+      dashboard.button("c", icons.half_life .. "  Configuration", "<cmd>e $MYVIMRC<BAR>cd $HOME/.config/nvim<CR>"),
       dashboard.button("g", icons.github .. " Lazy Git", "<cmd>LazyGit<CR>"),
       dashboard.button("d", icons.database .. " DB UI", "<cmd>DBUI<CR><cmd>on<CR>"),
       dashboard.button("N", icons.note .. " Obsidian Note Keeper", "<cmd>ObsidianSearch<CR>"),
