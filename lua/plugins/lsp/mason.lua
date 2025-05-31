@@ -14,7 +14,7 @@ return {
         "html",
         "lua_ls",
         "phpactor",
-        "tailwindcss",
+        -- "tailwindcss",
         "ts_ls",
         "vue_ls",
       },
