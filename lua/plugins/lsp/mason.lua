@@ -16,7 +16,7 @@ return {
         "phpactor",
         "tailwindcss",
         "ts_ls",
-        "volar",
+        "vue_ls",
       },
       automatic_installation = true,
     })
