@@ -94,7 +94,7 @@ return {
               hybridMode = false,
             },
             typescript = {
-              tsdk = "/home/marco/.nvm/versions/node/v20.3.1/lib/node_modules/typescript/lib/",
+              tsdk = "~/.nvm/versions/node/v20.3.1/lib/node_modules/typescript/lib/",
             },
           },
         })
