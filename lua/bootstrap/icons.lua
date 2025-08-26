@@ -8,6 +8,7 @@ return {
   database = " ",
   download = " ",
   github = " ",
+  docker = "󰡨",
   files = {
     new = " ",
     find = "󰱼 ",

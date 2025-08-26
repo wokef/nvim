@@ -81,6 +81,7 @@ k("n", "<leader>t", "<cmd>:TestNearest<CR>", { desc = "Run current focused test"
 
 -- git
 k("n", "<leader>G", "<cmd>:LazyGit<CR>", { desc = "Lazygit" })
+k("n", "<leader>pD", "<cmd>:LazyDocker<CR>", { desc = "LazyDocker" })
 k("n", "<leader>gf", "<cmd>G<cr>", { desc = "Fugitive" })
 k("n", "<leader>gj", "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>", { desc = "Next Hunk" })
 k("n", "<leader>gk", "<cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>", { desc = "Prev Hunk" })

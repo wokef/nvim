@@ -120,6 +120,26 @@ function M.lazy_git()
   lazygit:toggle()
 end
 
+function M.lazy_docker()
+  local Terminal = require("toggleterm.terminal").Terminal
+  local lazydocker = Terminal:new({
+    cmd = "lazydocker",
+    hidden = true,
+    direction = "float",
+    float_opts = {
+      border = "none",
+      width = 100000,
+      height = 100000,
+    },
+    on_open = function(_)
+      vim.cmd("startinsert!")
+    end,
+    on_close = function(_) end,
+    count = 99,
+  })
+  lazydocker:toggle()
+end
+
 function M.dump(o)
   if type(o) == "table" then
     local s = "{ "

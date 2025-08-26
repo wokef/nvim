@@ -16,6 +16,10 @@ vim.api.nvim_create_user_command("LazyGit", function()
   require("bootstrap.common").lazy_git()
 end, {})
 
+vim.api.nvim_create_user_command("LazyDocker", function()
+  require("bootstrap.common").lazy_docker()
+end, {})
+
 vim.api.nvim_create_user_command("ClearLogs", function()
   require("bootstrap.common").clear_logs()
 end, {})
