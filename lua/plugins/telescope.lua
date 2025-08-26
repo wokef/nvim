@@ -82,6 +82,7 @@ return {
       },
       previewer = false,
       mappings = mappings,
+      file_ignore_patterns = { "node%_modules/.*", "vendor/*", "dismissed/*" },
     }
 
     local preview_settings = {
@@ -92,7 +93,7 @@ return {
         height = 0.99,
       },
       mappings = mappings,
-      file_ignore_patterns = { "node%_modules/.*", "vendor/*" },
+      file_ignore_patterns = { "dismissed/*", "public/*" },
       show_line = false,
     }
 
