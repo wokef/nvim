@@ -1,7 +1,5 @@
 local k = vim.keymap.set
 
--- k("i", "jj", "<esc>", { noremap = false })
--- k("i", "<esc>", "`", { noremap = false })
 k("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "No highlight" })
 k("n", "<leader>q", "<cmd>:confirm q<CR>", { desc = "Quit" })
 k("n", "<leader>w", "<cmd>:w<CR>", { desc = "Write" })
@@ -16,6 +14,7 @@ k("n", "<leader>pm", "<cmd>:Lazy<CR>", { desc = "Lazy manager" })
 k("n", "<leader>pd", "<cmd>:DBUIToggle<CR>", { desc = "Database UI" })
 k("n", "<leader>pn", "<cmd>:ObsidianSearch<CR>", { desc = "Notes Obsidian" })
 k("n", "<leader>H", "<cmd>:Inspect<cr>", { desc = "Inspect highlight under cursor" })
+k("n", "<leader>lD", "<cmd>:ClearLogs<CR>", { desc = "Clear logs" })
 
 k("n", "ss", ":split<CR>", { desc = "Split Horizontal" })
 k("n", "vs", ":vsplit<CR>", { desc = "Split verical" })

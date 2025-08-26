@@ -8,6 +8,25 @@ function M.lsp_config(file)
   return M.config_path() .. "/lua/plugins/lsp/settings/" .. file .. ".json"
 end
 
+function M.clear_logs()
+  local log_path = vim.fn.expand("$HOME") .. "/.local/state/nvim"
+  local ok_messages = "Clear log files:\n\n"
+
+  local log_files = vim.fn.glob(log_path .. "/*.log", false, true)
+  if #log_files > 0 then
+    for _, file in ipairs(log_files) do
+      local ok, err = pcall(vim.fn.writefile, {}, file)
+      if not ok then
+        vim.notify("Error clearing log file: " .. err, vim.log.levels.ERROR)
+      else
+        ok_messages = ok_messages .. file .. "\n"
+      end
+    end
+
+    vim.notify(ok_messages, vim.log.levels.INFO)
+  end
+end
+
 function M.buf_kill(kill_command, bufnr, force)
   kill_command = kill_command or "bd"
 

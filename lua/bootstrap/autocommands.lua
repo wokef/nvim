@@ -16,4 +16,8 @@ vim.api.nvim_create_user_command("LazyGit", function()
   require("bootstrap.common").lazy_git()
 end, {})
 
+vim.api.nvim_create_user_command("ClearLogs", function()
+  require("bootstrap.common").clear_logs()
+end, {})
+
 vim.api.nvim_command([[set clipboard+=unnamedplus]])
