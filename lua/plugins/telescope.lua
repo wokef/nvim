@@ -76,18 +76,18 @@ return {
       no_ignore = true,
       hidden = true,
       layout_strategy = "vertical",
-      sorting_strategy = "ascending",
+      sorting_strategy = "descending",
       layout_config = {
-        prompt_position = "top",
+        prompt_position = "bottom",
       },
       previewer = false,
       mappings = mappings,
     }
 
     local preview_settings = {
-      sorting_strategy = "ascending",
+      sorting_strategy = "descending",
       layout_config = {
-        prompt_position = "top",
+        prompt_position = "bottom",
         width = 0.99,
         height = 0.99,
       },
