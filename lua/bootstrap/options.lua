@@ -6,8 +6,8 @@ vim.opt.swapfile = true
 vim.opt.writebackup = false
 
 local backupDir = vim.fn.expand("$HOME/.backup")
-vim.opt.backupdir = backupDir .. "/.backup" -- cidectory for backup file
-vim.opt.directory = backupDir .. "/.backup" -- directory for temp file
+vim.opt.backupdir = backupDir -- cidectory for backup file
+vim.opt.directory = backupDir -- directory for temp file
 
 -- vistual options
 vim.opt.fillchars = vim.opt.fillchars + "eob: "
