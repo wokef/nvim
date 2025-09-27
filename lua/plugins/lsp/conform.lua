@@ -19,6 +19,9 @@ return {
         blade = { "blade-formatter" },
         sql = { "sql_formatter" },
         mysql = { "sql_formatter" },
+        sh = { "beautysh" },
+        zsh = { "beautysh" },
+        bash = { "beautysh" },
       },
       format_on_save = {
         lsp_fallback = true,
