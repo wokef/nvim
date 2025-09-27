@@ -79,6 +79,9 @@ k("n", "<leader>sT", "<cmd>TodoTelescope<CR>", { desc = "Search in TODO" })
 k("n", "<leader>T", "<cmd>:TestFile<CR>", { desc = "Run full file tests" })
 k("n", "<leader>t", "<cmd>:TestNearest<CR>", { desc = "Run current focused test" })
 
+-- quickfix list
+k("n", "<leader>O", "<cmd>:copen<CR>", { desc = "Open quickfix list" })
+
 -- git
 k("n", "<leader>G", "<cmd>:LazyGit<CR>", { desc = "Lazygit" })
 k("n", "<leader>pD", "<cmd>:LazyDocker<CR>", { desc = "LazyDocker" })
