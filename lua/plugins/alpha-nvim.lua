@@ -15,7 +15,7 @@ return {
     dashboard.section.header.val = {
       {
         type = "text",
-        val = icons.half_life .. " Neo VIM | v. " .. vim.version().major .. "." .. vim.version().minor,
+        val = icons.black_mesa .. "  Neo VIM | v. " .. vim.version().major .. "." .. vim.version().minor,
         opts = { hl = "DashboardL4", position = "left" },
       },
     }

@@ -3,6 +3,7 @@ return {
     circleRight = " ",
     chevronRight = "",
   },
+  black_mesa = "󰂩",
   close = " ",
   code = " ",
   database = " ",
