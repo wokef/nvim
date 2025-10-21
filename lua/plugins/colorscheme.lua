@@ -11,6 +11,7 @@ return {
     local fg_dark = "#B4D0E9"
     local fg_gutter = "#627E97"
     local border = "#547998"
+    local grey_dark = "#111f33"
     local c = require("bootstrap.colors")
 
     require("tokyonight").setup({
@@ -38,7 +39,7 @@ return {
 
     vim.api.nvim_set_hl(0, "BufferCurrentSign", { fg = c.fuksia })
     vim.api.nvim_set_hl(0, "BufferLineIndicatorSelected", { fg = c.fuksia })
-    vim.api.nvim_set_hl(0, "ColorColumn", { bg = c.red_dark })
+    vim.api.nvim_set_hl(0, "ColorColumn", { bg = grey_dark })
     vim.api.nvim_set_hl(0, "GitSignsAdd", { fg = c.cyan_native })
     vim.api.nvim_set_hl(0, "GitSignsChange", { fg = c.blue_light })
     vim.api.nvim_set_hl(0, "GitSignsDelete", { fg = c.fuksia })
