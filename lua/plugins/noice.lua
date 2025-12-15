@@ -6,14 +6,14 @@ return {
       enabled = true,
       menu = "wild",
     },
-    messages = {
-      enabled = false,
-      view = "cmdline",
-      view_error = "cmdline",
-      view_warn = "cmdline",
-      view_history = "messages",
-      view_search = false,
-    },
+    -- messages = {
+    --   enabled = false,
+    --   view = "cmdline",
+    --   view_error = "cmdline",
+    --   view_warn = "cmdline",
+    --   view_history = "messages",
+    --   view_search = false,
+    -- },
     lsp = {
       progress = { enabled = false },
       hover = { enabled = false },
