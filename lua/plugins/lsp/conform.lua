@@ -19,6 +19,7 @@ return {
         blade = { "blade-formatter" },
         sql = { "sql_formatter" },
         mysql = { "sql_formatter" },
+        sqlite = { "sql_formatter" },
         sh = { "beautysh" },
         zsh = { "beautysh" },
         bash = { "beautysh" },
