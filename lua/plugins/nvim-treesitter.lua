@@ -1,33 +1,44 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    branch = "master",
-    event = { "BufReadPre", "BufNewFile" },
+    lazy = false,
     build = ":TSUpdate",
-    dependencies = {
-      "JoosepAlviste/nvim-ts-context-commentstring",
-      { "nvim-treesitter/nvim-treesitter-textobjects", branch = "master" },
-      "windwp/nvim-ts-autotag",
-    },
+    -- dependencies = {
+    -- "JoosepAlviste/nvim-ts-context-commentstring",
+    -- { "nvim-treesitter/nvim-treesitter-textobjects", branch = "master" },
+    -- "windwp/nvim-ts-autotag",
+    -- },
     config = function()
-      require("nvim-treesitter.configs").setup({
-        highlight = {
-          enable = true,
-        },
-        indent = { enable = true },
-        autotag = {
-          enable = true,
-        },
-      })
-
-      require("nvim-treesitter.parsers").get_parser_configs().blade = {
-        install_info = {
-          url = "https://github.com/EmranMR/tree-sitter-blade",
-          files = { "src/parser.c" },
-          branch = "main",
-        },
-        filetype = "blade",
+      local ts = require("nvim-treesitter")
+      local languages = {
+        "bash",
+        "blade",
+        "c",
+        "css",
+        "html",
+        "javascript",
+        "json",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "php",
+        "phpdoc",
+        "query",
+        "scss",
+        "typescript",
+        "vue",
       }
+
+      for _, lang in ipairs(languages) do
+        ts.install(lang)
+      end
+
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = languages,
+        callback = function()
+          vim.treesitter.start()
+        end,
+      })
     end,
   },
 }
