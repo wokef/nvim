@@ -4,49 +4,52 @@ return {
   "akinsho/bufferline.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   version = "*",
-  opts = {
-    options = {
-      mode = "buffers",
-      truncate_names = false,
-      color_icons = true,
-      max_name_length = 50,
-      separator_style = { "", "" },
-      indicator = {
-        icon = icon.extraBoldLineLeft,
-        style = "icon",
-      },
-      diagnostics = "nvim_lsp",
-      diagnostics_update_in_insert = false,
-      diagnostics_indicator = function(_, _, diagnostics, _)
-        local icons = require("bootstrap.icons")
-        local result = {}
-        local symbols = {
-          error = icons.lsp.Error,
-          warning = icons.lsp.Warn,
-          info = icons.lsp.Info,
-        }
+  opts = function()
+    vim.api.nvim_set_hl(0, "BufferLineBufferSelected", { fg = "#B4D0E9", bg = "#011628" })
 
-        for name, count in pairs(diagnostics) do
-          if symbols[name] and count > 0 then
-            table.insert(result, symbols[name] .. " " .. count)
+    return {
+      options = {
+        mode = "buffers",
+        truncate_names = false,
+        max_name_length = 50,
+        separator_style = "slant",
+        indicator = {
+          icon = icon.extraBoldLineLeft,
+          style = "icon",
+        },
+        diagnostics = "nvim_lsp",
+        diagnostics_update_in_insert = false,
+        diagnostics_indicator = function(_, _, diagnostics, _)
+          local icons = require("bootstrap.icons")
+          local result = {}
+          local symbols = {
+            error = icons.lsp.Error,
+            warning = icons.lsp.Warn,
+            info = icons.lsp.Info,
+          }
+
+          for name, count in pairs(diagnostics) do
+            if symbols[name] and count > 0 then
+              table.insert(result, symbols[name] .. " " .. count)
+            end
           end
-        end
 
-        return table.concat(result, " ")
-      end,
-      offsets = {
-        {
-          filetype = "NvimTree",
-          text = "Explorer",
-          text_align = "center",
-          separator = true,
+          return table.concat(result, " ")
+        end,
+        offsets = {
+          {
+            filetype = "NvimTree",
+            text = "Explorer",
+            text_align = "center",
+            -- separator = true,
+          },
+        },
+        hover = {
+          enabled = true,
+          delay = 200,
+          reveal = { "close" },
         },
       },
-      hover = {
-        enabled = true,
-        delay = 200,
-        reveal = { "close" },
-      },
-    },
-  },
+    }
+  end,
 }

@@ -30,7 +30,7 @@ return {
         symlink_destination = true,
       },
       view = {
-        width = 50,
+        width = 69,
         side = "left",
         number = false,
         relativenumber = false,

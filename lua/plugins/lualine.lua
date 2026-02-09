@@ -6,26 +6,13 @@ return {
     local icons = require("bootstrap.icons")
     local colors = require("bootstrap.colors")
 
-    local bg = "#011423"
-
-    local text_dark = { bg = bg, fg = colors.normal }
-    local text_light = { bg = colors.black_light, fg = colors.grey_light }
-    local inactive = { bg = colors.black_light, fg = colors.grey, gui = "" }
-    local insert_a = { bg = colors.fuksia, fg = colors.white, gui = "" }
-    local normal_a = { bg = colors.cyan, fg = bg, gui = "" }
-    local visual_a = { bg = colors.orange, fg = colors.white, giu = "" }
+    local style = { bg = colors.bg, fg = colors.fg }
+    local inactive = { bg = colors.bg, fg = colors.fg }
 
     local sections = {
       lualine_a = { "mode" },
       lualine_b = {
-        {
-          "b:gitsigns_head",
-          icon = "%#SLGitIcon#" .. icons.git.branch .. "%*" .. "%#SLBranchName#",
-          color = { gui = "bold" },
-        },
-      },
-      lualine_c = {},
-      lualine_x = {
+        "branch",
         {
           "diff",
           source = function()
@@ -43,7 +30,6 @@ return {
             modified = icons.git.linesChanged,
             removed = icons.git.linesRemoved,
           },
-          padding = { left = 2, right = 1 },
         },
         {
           "diagnostics",
@@ -55,14 +41,17 @@ return {
             hint = icons.lsp.Hint,
           },
         },
+      },
+      lualine_c = {},
+      lualine_x = {
         {
           function()
             local buf_clients = vim.lsp.get_clients({ bufnr = 0 })
             if #buf_clients == 0 then
-              return icons.lsp.Off .. " Lsp Off"
+              return ""
             end
 
-            local buf_client_names = { icons.target }
+            local buf_client_names = {}
             for _, client in pairs(buf_clients) do
               if client.name ~= "copilot" then
                 table.insert(buf_client_names, client.name)
@@ -85,23 +74,31 @@ return {
               end
             end
 
-            return string.format("%s", table.concat(buf_client_names, ", "))
+            for i, name in ipairs(buf_client_names) do
+              name = name:gsub("%s+", "")
+              name = name:sub(1, 1):upper() .. name:sub(2)
+              buf_client_names[i] = name
+            end
+
+            return string.format("%s", table.concat(buf_client_names, "·"))
           end,
-          color = { gui = "bold" },
         },
-        "filetype",
+        {
+          "filetype",
+          colored = false,
+          icon_only = false,
+        },
+      },
+      lualine_y = {
+        "fileformat",
+        "encoding",
         {
           function()
             local shiftwidth = vim.api.nvim_get_option_value("shiftwidth", { buf = 0 })
 
             return icons.tab .. " " .. shiftwidth
           end,
-          padding = 1,
         },
-      },
-      lualine_y = {
-        -- "progress"
-        "encoding",
       },
       lualine_z = { "location" },
     }
@@ -119,24 +116,24 @@ return {
       options = {
         theme = {
           normal = {
-            a = normal_a,
-            b = text_light,
-            c = text_dark,
+            a = style,
+            b = style,
+            c = style,
           },
           insert = {
-            a = insert_a,
-            b = text_light,
-            c = text_dark,
+            a = style,
+            b = style,
+            c = style,
           },
           visual = {
-            a = visual_a,
-            b = text_light,
-            c = text_dark,
+            a = style,
+            b = style,
+            c = style,
           },
           replace = {
-            a = insert_a,
-            b = text_light,
-            c = text_dark,
+            a = style,
+            b = style,
+            c = style,
           },
           inactive = {
             a = inactive,
@@ -146,7 +143,7 @@ return {
         },
         globalstatus = true,
         icons_enabled = true,
-        component_separators = { left = icons.boldLineLeft, right = "" },
+        component_separators = { left = "", right = "" },
         section_separators = { left = icons.boldLineLeft, right = "" },
         disabled_filetypes = { "alpha" },
       },

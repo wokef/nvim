@@ -37,29 +37,28 @@ return {
 
     vim.cmd.colorscheme("tokyonight")
 
-    vim.api.nvim_set_hl(0, "BufferCurrentSign", { fg = c.fuksia })
-    vim.api.nvim_set_hl(0, "BufferLineIndicatorSelected", { fg = c.fuksia })
+    vim.api.nvim_set_hl(0, "CursorLineNr", { fg = c.cyan_native })
     vim.api.nvim_set_hl(0, "ColorColumn", { bg = grey_dark })
     vim.api.nvim_set_hl(0, "GitSignsAdd", { fg = c.cyan_native })
     vim.api.nvim_set_hl(0, "GitSignsChange", { fg = c.blue_light })
     vim.api.nvim_set_hl(0, "GitSignsDelete", { fg = c.fuksia })
     vim.api.nvim_set_hl(0, "IndentBlanklineChar", { fg = c.cyan_native, bg = c.cyan_native })
-    vim.api.nvim_set_hl(0, "NoiceMini", { fg = c.cyan_light, bg = c.black_light, italic = true })
+    vim.api.nvim_set_hl(0, "NoiceMini", { fg = c.cyan_light, bg = "", italic = true })
     vim.api.nvim_set_hl(0, "WinSeparator", { fg = c.cyan_light })
   end,
 
   dependencies = {
     "rktjmp/lush.nvim",
-    -- "bluz71/vim-nightfly-colors",
-    -- "olivercederborg/poimandres.nvim",
-    -- "JoosepAlviste/palenightfall.nvim",
-    -- "gbprod/nord.nvim",
-    -- "oxfist/night-owl.nvim",
-    -- "tiagovla/tokyodark.nvim",
-    -- "embark-theme/vim",
-    -- "cocopon/iceberg.vim",
-    -- "haishanh/night-owl.vim",
-    -- "gosukiwi/vim-atom-dark",
-    -- "khaledgarbaya/night-owl-vim-theme",
+    "bluz71/vim-nightfly-colors",
+    "olivercederborg/poimandres.nvim",
+    "JoosepAlviste/palenightfall.nvim",
+    "gbprod/nord.nvim",
+    "oxfist/night-owl.nvim",
+    "tiagovla/tokyodark.nvim",
+    "embark-theme/vim",
+    "cocopon/iceberg.vim",
+    "haishanh/night-owl.vim",
+    "gosukiwi/vim-atom-dark",
+    "khaledgarbaya/night-owl-vim-theme",
   },
 }
