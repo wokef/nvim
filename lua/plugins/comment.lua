@@ -10,6 +10,6 @@ return {
     })
 
     local ft = require("Comment.ft")
-    ft({ "mysql", "sql" }, "--%s")
+    ft({ "mysql", "sql", "sqlite" }, "--%s")
   end,
 }
