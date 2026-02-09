@@ -2,7 +2,9 @@ return {
   "vim-test/vim-test",
   cmd = { "TestFile", "TestNearest" },
   init = function()
-    vim.cmd([[let test#strategy = 'toggleterm']])
-    vim.cmd([[let test#php#phpunit#executable = 'supa test']])
+    vim.g["test#strategy"] = "toggleterm"
+
+    vim.g["test#custom_runners"] = { PHP = { "Artisan" } }
+    vim.g["test#php#runner"] = "artisan"
   end,
 }
