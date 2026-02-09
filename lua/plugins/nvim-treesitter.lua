@@ -1,11 +1,12 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "master",
     event = { "BufReadPre", "BufNewFile" },
     build = ":TSUpdate",
     dependencies = {
       "JoosepAlviste/nvim-ts-context-commentstring",
-      "nvim-treesitter/nvim-treesitter-textobjects",
+      { "nvim-treesitter/nvim-treesitter-textobjects", branch = "master" },
       "windwp/nvim-ts-autotag",
     },
     config = function()
