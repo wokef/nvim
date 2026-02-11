@@ -33,8 +33,27 @@ return {
         ts.install(lang)
       end
 
+      local filetypes = {
+        "bash",
+        "sh",
+        "blade",
+        "css",
+        "html",
+        "javascript",
+        "json",
+        "lua",
+        "markdown",
+        "php",
+        "sql",
+        "mysql",
+        "sqlite",
+        "scss",
+        "typescript",
+        "vue",
+      }
+
       vim.api.nvim_create_autocmd("FileType", {
-        pattern = languages,
+        pattern = filetypes,
         callback = function()
           vim.treesitter.start()
         end,
