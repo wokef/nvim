@@ -115,7 +115,5 @@ return {
         },
       },
     })
-
-    telescope.load_extension("projects")
   end,
 }

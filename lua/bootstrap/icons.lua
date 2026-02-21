@@ -42,7 +42,6 @@ return {
   boldLineLeft = "▎",
   extraBoldLineLeft = "▍",
   boldLineRight = "▐",
-  projects = " ",
   search = " ",
   settings = " ",
   tab = "󰌒 ",
