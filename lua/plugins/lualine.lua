@@ -90,18 +90,19 @@ return {
         },
       },
       lualine_y = {
-        "fileformat",
-        "encoding",
+        { "fileformat", padding = { left = 1, right = 1 } },
+        { "encoding", padding = { left = 0, right = 1 } },
         {
           function()
             local shiftwidth = vim.api.nvim_get_option_value("shiftwidth", { buf = 0 })
 
-            return icons.tab .. " " .. shiftwidth
+            return icons.tab .. shiftwidth
           end,
+          padding = { left = 1, right = 1 },
         },
       },
       lualine_z = {
-        { "progress", padding = { left = 1, right = 0 } },
+        { "progress", padding = { left = 1, right = 1 } },
         { "location", padding = { left = 0, right = 1 } },
       },
     }
