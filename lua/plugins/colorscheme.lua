@@ -45,6 +45,7 @@ return {
     vim.api.nvim_set_hl(0, "IndentBlanklineChar", { fg = c.cyan_native, bg = c.cyan_native })
     vim.api.nvim_set_hl(0, "NoiceMini", { fg = c.cyan_light, bg = "", italic = true })
     vim.api.nvim_set_hl(0, "WinSeparator", { fg = c.cyan_light })
+    vim.api.nvim_set_hl(0, "Search", { fg = c.white, bg = c.red_dark })
   end,
 
   dependencies = {
