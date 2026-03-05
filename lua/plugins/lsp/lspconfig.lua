@@ -36,12 +36,19 @@ return {
     })
 
     local icons = require("bootstrap.icons").lsp
-    for type, icon in pairs(icons) do
-      local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-    end
-   
-    vim.lsp.config('lua_ls', {
+    vim.diagnostic.config({
+      virtual_text = true,
+      signs = {
+        text = {
+          [vim.diagnostic.severity.ERROR] = icons.Error,
+          [vim.diagnostic.severity.WARN] = icons.Warn,
+          [vim.diagnostic.severity.INFO] = icons.Info,
+          [vim.diagnostic.severity.HINT] = icons.Hint,
+        },
+      },
+    })
+
+    vim.lsp.config("lua_ls", {
       settings = {
         Lua = {
           diagnostics = {
@@ -56,14 +63,16 @@ return {
         },
       },
     })
-    vim.lsp.enable('luals')
+    vim.lsp.enable("luals")
 
-    local vue_language_server_path = vim.fn.expand '$MASON/packages' .. '/vue-language-server' .. '/node_modules/@vue/language-server'
+    local vue_language_server_path = vim.fn.expand("$MASON/packages")
+      .. "/vue-language-server"
+      .. "/node_modules/@vue/language-server"
     local vue_plugin = {
-      name = '@vue/typescript-plugin',
+      name = "@vue/typescript-plugin",
       location = vue_language_server_path,
-      languages = { 'vue' },
-      configNamespace = 'typescript',
+      languages = { "vue" },
+      configNamespace = "typescript",
     }
     local vtsls_config = {
       settings = {
@@ -75,15 +84,15 @@ return {
           },
         },
       },
-      filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+      filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
     }
 
     local vue_ls_config = {
       on_init = function(client)
-        client.handlers['tsserver/request'] = function(_, result, context)
-          local clients = vim.lsp.get_clients({ bufnr = context.bufnr, name = 'vtsls' })
+        client.handlers["tsserver/request"] = function(_, result, context)
+          local clients = vim.lsp.get_clients({ bufnr = context.bufnr, name = "vtsls" })
           if #clients == 0 then
-            vim.notify('Could not find `vtsls` lsp client, `vue_ls` would not work without it.', vim.log.levels.ERROR)
+            vim.notify("Could not find `vtsls` lsp client, `vue_ls` would not work without it.", vim.log.levels.ERROR)
             return
           end
           local ts_client = clients[1]
@@ -91,22 +100,22 @@ return {
           local param = unpack(result)
           local id, command, payload = unpack(param)
           ts_client:exec_cmd({
-            title = 'vue_request_forward',
-            command = 'typescript.tsserverRequest',
+            title = "vue_request_forward",
+            command = "typescript.tsserverRequest",
             arguments = {
               command,
               payload,
             },
           }, { bufnr = context.bufnr }, function(_, r)
-              local response_data = { { id, r.body } }
-              ---@diagnostic disable-next-line: param-type-mismatch
-              client:notify('tsserver/response', response_data)
-            end)
+            local response_data = { { id, r.body } }
+            ---@diagnostic disable-next-line: param-type-mismatch
+            client:notify("tsserver/response", response_data)
+          end)
         end
       end,
     }
-    vim.lsp.config('vtsls', vtsls_config)
-    vim.lsp.config('vue_ls', vue_ls_config)
-    vim.lsp.enable({'vtsls', 'vue_ls'})
+    vim.lsp.config("vtsls", vtsls_config)
+    vim.lsp.config("vue_ls", vue_ls_config)
+    vim.lsp.enable({ "vtsls", "vue_ls" })
   end,
 }
