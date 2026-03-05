@@ -35,6 +35,8 @@ k({ "n", "x" }, "<C-M-Down>", ":resize -2<CR>", { desc = "Resize window" })
 k({ "n", "x" }, "<C-M-Left>", ":vertical resize -2<CR>", { desc = "Resize window" })
 
 -- navigation
+k({ "n", "x" }, "<C-j>", "<C-d>", { desc = "Page Down" })
+k({ "n", "x" }, "<C-k>", "<C-u>", { desc = "Page Up" })
 k({ "n", "x" }, "<M-Up>", "<C-w>k", { desc = "Navigate window" })
 k({ "n", "x" }, "<M-Right>", "<C-w>l", { desc = "Navigate window" })
 k({ "n", "x" }, "<M-Down>", "<C-w>j", { desc = "Navigate window" })
