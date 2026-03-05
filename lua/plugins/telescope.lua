@@ -115,5 +115,21 @@ return {
         },
       },
     })
+
+    -- search
+    local k = vim.keymap.set
+
+    k("n", "<leader>f", "<cmd>Telescope git_files<CR>", { desc = "Search by project filename" })
+    k("n", "<leader>F", "<cmd>Telescope find_files<CR>", { desc = "Search by filename" })
+    k("n", "<leader>sf", "<cmd>Telescope find_files<CR>", { desc = "Search by filename" })
+    k("n", "<leader>sw", "<cmd>Telescope grep_string<CR>", { desc = "Search in text under cursor" })
+    k("n", "<leader>sl", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Search in file lines" })
+    k("n", "<leader>st", "<cmd>Telescope live_grep<CR>", { desc = "Search in file content" })
+    k("n", "<leader>sr", "<cmd>Telescope oldfiles<CR>", { desc = "Search recent file" })
+    k("n", "<leader>sb", "<cmd>Telescope buffers<CR>", { desc = "Search in buffers" })
+    k("n", "<leader>sq", "<cmd>Telescope quickfix<CR>", { desc = "Search in quickfix" })
+    k("n", "<leader>sd", "<cmd>Telescope diagnostics<CR>", { desc = "Search through diagnostics messages" })
+    k("n", "<leader>sn", "<cmd>ObsidianTags<CR>", { desc = "Search through notes by tags" })
+    k("n", "<leader>sT", "<cmd>TodoTelescope<CR>", { desc = "Search in TODO" })
   end,
 }
