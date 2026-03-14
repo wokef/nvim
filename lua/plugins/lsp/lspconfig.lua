@@ -37,7 +37,7 @@ return {
 
     local icons = require("bootstrap.icons").lsp
     vim.diagnostic.config({
-      virtual_text = true,
+      virtual_text = false,
       signs = {
         text = {
           [vim.diagnostic.severity.ERROR] = icons.Error,
