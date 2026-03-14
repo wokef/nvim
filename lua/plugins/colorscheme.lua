@@ -46,6 +46,9 @@ return {
     vim.api.nvim_set_hl(0, "NoiceMini", { fg = c.cyan_light, bg = "", italic = true })
     vim.api.nvim_set_hl(0, "WinSeparator", { fg = c.cyan_light })
     vim.api.nvim_set_hl(0, "Search", { fg = c.white, bg = c.red_dark })
+
+    vim.api.nvim_set_hl(0, "DashboardTitle", { fg = c.fuksia })
+    vim.api.nvim_set_hl(0, "BufferLineBufferSelected", { fg = fg_dark, bg = bg })
   end,
 
   dependencies = {

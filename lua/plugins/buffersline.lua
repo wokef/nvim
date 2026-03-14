@@ -5,8 +5,6 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   version = "*",
   opts = function()
-    vim.api.nvim_set_hl(0, "BufferLineBufferSelected", { fg = "#B4D0E9", bg = "#011628" })
-
     return {
       options = {
         mode = "buffers",

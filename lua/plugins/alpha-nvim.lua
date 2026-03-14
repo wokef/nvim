@@ -3,10 +3,7 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     local icons = require("bootstrap.icons")
-    local colors = require("bootstrap.colors")
     local dashboard = require("alpha.themes.startify")
-
-    vim.api.nvim_set_hl(0, "DashboardTitle", { fg = colors.fuksia })
 
     dashboard.section.header.type = "group"
     dashboard.section.header.val = {
