@@ -5,7 +5,6 @@ return {
     local bg = "#011628"
     local bg_dark = "#011423"
     local bg_highlight = "#143652"
-    -- local bg_search = "#0A64AC"
     local bg_visual = "#275378"
     local fg = "#CBE0F0"
     local fg_dark = "#B4D0E9"
@@ -22,7 +21,6 @@ return {
         colors.bg_float = bg_dark
         colors.bg_highlight = bg_highlight
         colors.bg_popup = bg_dark
-        -- colors.bg_search = bg_search
         colors.bg_sidebar = bg_dark
         colors.bg_statusline = bg_dark
         colors.bg_visual = bg_visual
@@ -36,6 +34,8 @@ return {
     })
 
     vim.cmd.colorscheme("tokyonight")
+    vim.api.nvim_set_hl(0, "Normal", { fg = fg, bg = bg })
+    vim.api.nvim_set_hl(0, "CursorLine", { bg = bg_highlight })
 
     vim.api.nvim_set_hl(0, "CursorLineNr", { fg = c.cyan_native })
     vim.api.nvim_set_hl(0, "ColorColumn", { bg = grey_dark })
@@ -46,23 +46,6 @@ return {
     vim.api.nvim_set_hl(0, "NoiceMini", { fg = c.cyan_light, bg = "", italic = true })
     vim.api.nvim_set_hl(0, "WinSeparator", { fg = c.cyan_light })
     vim.api.nvim_set_hl(0, "Search", { fg = c.white, bg = c.red_dark })
-
     vim.api.nvim_set_hl(0, "DashboardTitle", { fg = c.fuksia })
-    vim.api.nvim_set_hl(0, "BufferLineBufferSelected", { fg = fg_dark, bg = bg })
   end,
-
-  dependencies = {
-    "rktjmp/lush.nvim",
-    "bluz71/vim-nightfly-colors",
-    "olivercederborg/poimandres.nvim",
-    "JoosepAlviste/palenightfall.nvim",
-    "gbprod/nord.nvim",
-    "oxfist/night-owl.nvim",
-    "tiagovla/tokyodark.nvim",
-    "embark-theme/vim",
-    "cocopon/iceberg.vim",
-    "haishanh/night-owl.vim",
-    "gosukiwi/vim-atom-dark",
-    "khaledgarbaya/night-owl-vim-theme",
-  },
 }
