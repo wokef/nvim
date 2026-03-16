@@ -4,10 +4,10 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     local icons = require("bootstrap.icons")
-    local colors = require("bootstrap.colors")
+    local colors = require("bootstrap.colorscheme").colors
 
-    local style = { bg = colors.bg, fg = colors.fg }
-    local inactive = { bg = colors.bg, fg = colors.fg }
+    local style = { bg = colors.black, fg = colors.fg }
+    local inactive = { bg = colors.black, fg = colors.fg }
 
     local sections = {
       lualine_a = { "mode" },
