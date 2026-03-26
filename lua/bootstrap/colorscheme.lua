@@ -2,8 +2,14 @@ local M = {}
 
 M.colors = {
   bg = "#011628",
-  fg = "#565F89",
+  bg_dark = "#011423",
+  bg_visual = "#275378",
+  fg = "#CBE0F0",
+  fg_dark = "#B4D0E9",
+  fg_darker = "#565F89",
+  fg_gutter = "#627E97",
   highlight = "#143652",
+  border = "#547998",
 
   black = "#000b14",
   blue = "#5fafff",

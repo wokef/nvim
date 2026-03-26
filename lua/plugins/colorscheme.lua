@@ -19,6 +19,7 @@ return {
     -- vim.cmd.colorscheme("tokyonight")
 
     -- require("colorschemes.customizations").apply()
+    require("colorschemes.tokyonight").apply()
   end,
   dependencies = {
     "EdenEast/nightfox.nvim",
@@ -33,5 +34,6 @@ return {
     "shaunsingh/nord.nvim",
     "tanvirtin/monokai.nvim",
     "Yazeed1s/oh-lucy.nvim",
+    "craftzdog/solarized-osaka.nvim",
   },
 }

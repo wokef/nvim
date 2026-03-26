@@ -1,19 +1,15 @@
 local M = {}
 
 function M.apply()
-  local bg = "#011628"
-  local bg_highlight = "#143652"
-  local fg = "#CBE0F0"
-  local grey_dark = "#111f33"
-  local c = require("bootstrap.colors")
+  local c = require("bootstrap.colorscheme").colors
 
-  vim.api.nvim_set_hl(0, "Normal", { fg = fg, bg = bg })
-  vim.api.nvim_set_hl(0, "NormalNC", { fg = fg, bg = bg })
-  vim.api.nvim_set_hl(0, "CursorLine", { bg = bg_highlight })
-  vim.api.nvim_set_hl(0, "TelescopeSelection", { bg = bg_highlight })
+  vim.api.nvim_set_hl(0, "Normal", { fg = c.fg, bg = c.bg })
+  vim.api.nvim_set_hl(0, "NormalNC", { fg = c.fg, bg = c.bg })
+  vim.api.nvim_set_hl(0, "CursorLine", { bg = c.bg_highlight })
+  vim.api.nvim_set_hl(0, "TelescopeSelection", { bg = c.bg_highlight })
 
   vim.api.nvim_set_hl(0, "CursorLineNr", { fg = c.cyan_native })
-  vim.api.nvim_set_hl(0, "ColorColumn", { bg = grey_dark })
+  vim.api.nvim_set_hl(0, "ColorColumn", { bg = c.grey_dark })
   vim.api.nvim_set_hl(0, "GitSignsAdd", { fg = c.cyan_native })
   vim.api.nvim_set_hl(0, "GitSignsChange", { fg = c.blue_light })
   vim.api.nvim_set_hl(0, "GitSignsDelete", { fg = c.fuksia })
