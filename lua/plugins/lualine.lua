@@ -6,8 +6,8 @@ return {
     local icons = require("bootstrap.icons")
     local colors = require("bootstrap.colorscheme").colors
 
-    local style = { bg = colors.black, fg = colors.fg }
-    local inactive = { bg = colors.black, fg = colors.fg }
+    local style = { bg = colors.black, fg = colors.fg_darker }
+    local inactive = { bg = colors.black, fg = colors.fg_darker }
 
     local sections = {
       lualine_a = { "mode" },
