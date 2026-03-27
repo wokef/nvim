@@ -19,6 +19,7 @@ M.colors = {
   green = "#50fa7b",
   green_dark = "#9ece6a",
   grey = "#7da1c5",
+  grey_dark = "#111f33",
   grey_light = "#c5cade",
   orange = "#ff8154",
   orange_light = "#ff9e64",
