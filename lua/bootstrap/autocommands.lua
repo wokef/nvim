@@ -24,6 +24,11 @@ vim.api.nvim_create_user_command("ClearLogs", function()
   require("bootstrap.common").clear_logs()
 end, {})
 
+vim.api.nvim_create_user_command("Config", function()
+  vim.cmd("cd $HOME/.config/nvim")
+  vim.cmd("e $MYVIMRC")
+end, {})
+
 vim.api.nvim_create_user_command("CS", function()
   require("telescope.pickers")
     .new({
