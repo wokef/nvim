@@ -131,9 +131,5 @@ return {
     k("n", "<leader>sd", "<cmd>Telescope diagnostics<CR>", { desc = "Search through diagnostics messages" })
     k("n", "<leader>sn", "<cmd>ObsidianTags<CR>", { desc = "Search through notes by tags" })
     k("n", "<leader>sT", "<cmd>TodoTelescope<CR>", { desc = "Search in TODO" })
-
-    if vim.fn.argc() == 0 then
-      vim.cmd("Telescope oldfiles")
-    end
   end,
 }
