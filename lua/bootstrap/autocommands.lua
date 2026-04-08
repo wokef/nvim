@@ -54,6 +54,8 @@ vim.api.nvim_create_user_command("CS", function()
             vim.cmd("syntax reset")
 
             vim.cmd.colorscheme(selection[1])
+
+            require("colorschemes.customizations").apply()
           end
         end)
         return true
