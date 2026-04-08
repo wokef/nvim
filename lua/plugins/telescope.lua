@@ -131,5 +131,11 @@ return {
     k("n", "<leader>sd", "<cmd>Telescope diagnostics<CR>", { desc = "Search through diagnostics messages" })
     k("n", "<leader>sn", "<cmd>ObsidianTags<CR>", { desc = "Search through notes by tags" })
     k("n", "<leader>sT", "<cmd>TodoTelescope<CR>", { desc = "Search in TODO" })
+    k("n", "gr", "<cmd>Telescope lsp_references<CR>", { desc = "Show LSP references" })
+    k("n", "gd", "<cmd>Telescope lsp_definitions<CR>", { desc = "Show LSP definitions" })
+    k("n", "gi", "<cmd>Telescope lsp_implementations<CR>", { desc = "Show LSP implementations" })
+    k("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", { desc = "Show LSP type definitions" })
+    k("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", { desc = "Show buffer diagnostics" })
+    k("n", "<leader>go", "<cmd>Telescope git_status<cr>", { desc = "Open changed file" })
   end,
 }
