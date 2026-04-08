@@ -35,7 +35,7 @@ return {
     -- vim.cmd.colorscheme("tokyonight-storm")
 
     -- require("colorschemes.tokyonight").apply()
-    require("colorschemes.customizations").apply()
+    -- require("colorschemes.customizations").apply()
   end,
   dependencies = {
     "AlexvZyl/nordic.nvim",
