@@ -51,7 +51,9 @@ return {
     {
       "<leader>sc",
       function()
-        require("fzf-lua").files({ cwd = "~/.config/nvim" })
+        local path = vim.fn.stdpath("config")
+
+        require("fzf-lua").files({ cwd = vim.fn.stdpath("config"), no_root = true })
       end,
       desc = "Search in neovim config",
     },
