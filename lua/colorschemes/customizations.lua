@@ -6,7 +6,6 @@ function M.apply()
   vim.api.nvim_set_hl(0, "Normal", { fg = c.fg, bg = c.bg })
   vim.api.nvim_set_hl(0, "NormalNC", { fg = c.fg, bg = c.bg })
   vim.api.nvim_set_hl(0, "CursorLine", { bg = c.highlight })
-  vim.api.nvim_set_hl(0, "TelescopeSelection", { bg = c.highlight })
 
   vim.api.nvim_set_hl(0, "CursorLineNr", { fg = c.cyan_light })
   vim.api.nvim_set_hl(0, "ColorColumn", { bg = c.grey_dark })

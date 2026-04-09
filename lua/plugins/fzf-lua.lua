@@ -1,0 +1,59 @@
+return {
+  "ibhagwan/fzf-lua",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  config = function()
+    local fzfActions = require("fzf-lua.actions")
+
+    local actions = {
+      ["enter"] = fzfActions.file_edit,
+      ["ctrl-q"] = fzfActions.file_sel_to_qf,
+    }
+
+    require("fzf-lua").setup({
+      winopts = {
+        backdrop = 100,
+        border = "rounded",
+        preview = {
+          layout = "vertical",
+          vertical = "up:45%",
+        },
+      },
+      keymap = {
+        builtin = {
+          ["<C-d>"] = "preview-page-down",
+          ["<C-u>"] = "preview-page-up",
+        },
+      },
+      actions = {
+        files = actions,
+      },
+    })
+  end,
+  keys = {
+    { "<leader>f", "<cmd>FzfLua files<CR>", desc = "Search by filename" },
+    { "<leader>sf", "<cmd>FzfLua git_files<CR>", desc = "Search by project filename" },
+    { "<leader>sw", "<cmd>FzfLua grep_cword<CR>", desc = "Search in text under cursor" },
+    { "<leader>sW", "<cmd>FzfLua grep_cWORD<CR>", desc = "Search out text under cursor" },
+    { "<leader>sl", "<cmd>FzfLua lines<CR>", desc = "Search in file lines" },
+    { "<leader>st", "<cmd>FzfLua grep<CR>", desc = "Search in file content" },
+    { "<leader>sr", "<cmd>FzfLua oldfiles<CR>", desc = "Search recent file" },
+    { "<leader>sb", "<cmd>FzfLua buffers<CR>", desc = "Search in buffers" },
+    { "<leader>sq", "<cmd>FzfLua quickfix<CR>", desc = "Search in quickfix" },
+    { "<leader>D", "<cmd>FzfLua diagnostics_document<CR>", desc = "Show buffer diagnostics" },
+    { "<leader>sd", "<cmd>FzfLua diagnostics_workspace<CR>", desc = "Search through diagnostics project messages" },
+    { "<leader>sn", "<cmd>ObsidianTags<CR>", desc = "Search through notes by tags" },
+    { "<leader>sT", "<cmd>TodoFzfLua<CR>", desc = "Search in TODO" },
+    { "gr", "<cmd>FzfLua lsp_references<CR>", desc = "Show LSP references" },
+    { "gd", "<cmd>FzfLua lsp_definitions<CR>", desc = "Show LSP definitions" },
+    { "gi", "<cmd>FzfLua lsp_implementations<CR>", desc = "Show LSP implementations" },
+    { "gt", "<cmd>FzfLua lsp_type_definitions<CR>", desc = "Show LSP type definitions" },
+    { "<leader>go", "<cmd>FzfLua git_status<cr>", desc = "Open changed file" },
+    {
+      "<leader>sc",
+      function()
+        require("fzf-lua").files({ cwd = "~/.config/nvim" })
+      end,
+      desc = "Search in neovim config",
+    },
+  },
+}
