@@ -28,6 +28,8 @@ return {
         files = actions,
       },
     })
+
+    vim.cmd([[ FzfLua register_ui_select ]])
   end,
   keys = {
     { "<leader>f", "<cmd>FzfLua files<CR>", desc = "Search by filename" },
@@ -47,6 +49,7 @@ return {
     { "gd", "<cmd>FzfLua lsp_definitions<CR>", desc = "Show LSP definitions" },
     { "gi", "<cmd>FzfLua lsp_implementations<CR>", desc = "Show LSP implementations" },
     { "gt", "<cmd>FzfLua lsp_type_definitions<CR>", desc = "Show LSP type definitions" },
+    { "<leader>a", "<cmd>FzfLua lsp_code_actions<CR>", desc = "See available code actions" },
     { "<leader>go", "<cmd>FzfLua git_status<cr>", desc = "Open changed file" },
     {
       "<leader>sc",

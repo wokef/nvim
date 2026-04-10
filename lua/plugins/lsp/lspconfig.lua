@@ -22,7 +22,6 @@ return {
         end
 
         k("n", "gD", vim.lsp.buf.declaration, opts("Go to declaration"))
-        k({ "n", "v" }, "<leader>a", vim.lsp.buf.code_action, opts("See available code actions"))
         k("n", "<leader>lr", vim.lsp.buf.rename, opts("Smart rename"))
         k("n", "<leader>d", vim.diagnostic.open_float, opts("Show line diagnostics"))
         k("n", "K", vim.lsp.buf.hover, opts("Show documentation for what is under cursor"))
