@@ -20,8 +20,12 @@ return {
       },
       keymap = {
         builtin = {
-          ["<C-d>"] = "preview-page-down",
           ["<C-u>"] = "preview-page-up",
+          ["<C-d>"] = "preview-page-down",
+        },
+        fzf = {
+          ["ctrl-a"] = "select-all",
+          ["ctrl-u"] = "deselect-all",
         },
       },
       actions = {
@@ -54,9 +58,7 @@ return {
     {
       "<leader>sc",
       function()
-        local path = vim.fn.stdpath("config")
-
-        require("fzf-lua").files({ cwd = vim.fn.stdpath("config"), no_root = true })
+        require("fzf-lua").files({ cwd = vim.fn.stdpath("config") })
       end,
       desc = "Search in neovim config",
     },
