@@ -4,10 +4,11 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     local icons = require("bootstrap.icons")
-    local colors = require("bootstrap.colors")
 
-    local style = { bg = colors.black, fg = colors.fg_darker }
-    local inactive = { bg = colors.black, fg = colors.fg_darker }
+    local fg = string.format("#%06x", vim.api.nvim_get_hl(0, { name = "Comment" }).fg)
+    local bg = string.format("#%06x", vim.api.nvim_get_hl(0, { name = "BufferLineFill" }).bg)
+
+    local style = { bg = bg, fg = fg }
 
     local sections = {
       lualine_a = { "mode" },
@@ -140,9 +141,9 @@ return {
             c = style,
           },
           inactive = {
-            a = inactive,
-            b = inactive,
-            c = inactive,
+            a = style,
+            b = style,
+            c = style,
           },
         },
         globalstatus = true,
