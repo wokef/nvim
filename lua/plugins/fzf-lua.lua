@@ -15,8 +15,11 @@ return {
         backdrop = 100,
         border = "rounded",
         preview = {
-          layout = "vertical",
-          vertical = "up:45%",
+          hidden = true,
+          layout = "horizontal",
+          wrap = "nowrap",
+          vertical = "up:55%",
+          horizontal = "right:60%",
         },
       },
       keymap = {
@@ -31,6 +34,14 @@ return {
       },
       actions = {
         files = actions,
+      },
+
+      oldfiles = {
+        prompt = "History❯ ",
+        cwd_only = true,
+        stat_file = false,
+        include_current_session = true,
+        ignore_current_buffer = true,
       },
     })
 
