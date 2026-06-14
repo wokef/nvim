@@ -4,7 +4,7 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     local icons = require("bootstrap.icons")
-    local colors = require("bootstrap.colorscheme").colors
+    local colors = require("bootstrap.colors")
 
     local style = { bg = colors.black, fg = colors.fg_darker }
     local inactive = { bg = colors.black, fg = colors.fg_darker }

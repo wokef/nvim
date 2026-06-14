@@ -19,13 +19,6 @@ k("n", "<leader>lD", "<cmd>:ClearLogs<CR>", { desc = "Clear logs" })
 k("n", "ss", ":split<CR>", { desc = "Split Horizontal" })
 k("n", "vs", ":vsplit<CR>", { desc = "Split verical" })
 
-k(
-  "n",
-  "<leader>R",
-  "<cmd>:lua package.loaded['bootstrap.colorscheme']=nil require('bootstrap.colorscheme').setup()<cr>",
-  { desc = "Reload colorscheme" }
-)
-
 -- navigation
 k("n", "H", ":BufferLineCyclePrev<CR>")
 k("n", "L", ":BufferLineCycleNext<CR>")
