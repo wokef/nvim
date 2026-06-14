@@ -10,6 +10,7 @@ return {
     }
 
     require("fzf-lua").setup({
+      file_ignore_patterns = { "dismissed/" },
       winopts = {
         backdrop = 100,
         border = "rounded",
