@@ -61,6 +61,7 @@ return {
     { "<leader>sd", "<cmd>FzfLua diagnostics_workspace<CR>", desc = "Search through diagnostics project messages" },
     { "<leader>sn", "<cmd>ObsidianTags<CR>", desc = "Search through notes by tags" },
     { "<leader>sT", "<cmd>TodoFzfLua<CR>", desc = "Search in TODO" },
+    { "<leader>sC", "<cmd>FzfLua colorschemes<cr>", desc = "Search in colorscheme" },
     { "gr", "<cmd>FzfLua lsp_references<CR>", desc = "Show LSP references" },
     { "gd", "<cmd>FzfLua lsp_definitions<CR>", desc = "Show LSP definitions" },
     { "gi", "<cmd>FzfLua lsp_implementations<CR>", desc = "Show LSP implementations" },
