@@ -23,6 +23,7 @@ return {
         sh = { "beautysh" },
         zsh = { "beautysh" },
         bash = { "beautysh" },
+        nginx = { "nginxfmt" },
       },
       format_on_save = {
         lsp_fallback = true,
