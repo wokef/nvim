@@ -15,6 +15,7 @@ return {
     fn(0, "GitSignsChange", { fg = c.blue })
     fn(0, "GitSignsDelete", { fg = c.fuksia })
     fn(0, "WinSeparator", { fg = c.cyan_light })
+    fn(0, "DiffText", { fg = c.purple_light, bg = c.cyan })
     fn(0, "Search", { fg = c.white, bg = c.fuksia })
   end,
   dependencies = {},
