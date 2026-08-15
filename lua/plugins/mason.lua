@@ -1,7 +1,7 @@
 return {
-  "williamboman/mason.nvim",
+  "mason-org/mason.nvim",
   dependencies = {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
   config = function()
@@ -9,23 +9,32 @@ return {
 
     require("mason-lspconfig").setup({
       ensure_installed = {
+        "bashls",
+        "copilot",
         "cssls",
         "emmet_ls",
         "html",
+        "jsonls",
+        "lemminx",
         "lua_ls",
+        "markdown_oxide",
         "phpactor",
         "vtsls",
         "vue_ls",
+        "yamlls",
       },
-      automatic_installation = true,
     })
 
     require("mason-tool-installer").setup({
       ensure_installed = {
+        "beautysh",
+        "blade-formatter",
+        "eslint_d",
+        "nginx-config-formatter",
         "pint",
         "prettier",
-        "stylua",
         "sql-formatter",
+        "stylua",
       },
     })
   end,
