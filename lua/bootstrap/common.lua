@@ -1,13 +1,5 @@
 local M = {}
 
-function M.config_path()
-  return vim.fn.expand("$HOME") .. "/.config/nvim"
-end
-
-function M.lsp_config(file)
-  return M.config_path() .. "/lua/plugins/lsp/settings/" .. file .. ".json"
-end
-
 function M.clear_logs()
   local log_path = vim.fn.expand("$HOME") .. "/.local/state/nvim"
   local ok_messages = "Clear log files:\n\n"

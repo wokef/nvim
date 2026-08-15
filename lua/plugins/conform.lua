@@ -3,27 +3,26 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   config = function()
     local conform = require("conform")
-    local lsp_config = require("bootstrap.common").lsp_config
 
     conform.setup({
       formatters_by_ft = {
-        javascript = { "prettier" },
-        typescript = { "prettier" },
+        bash = { "beautysh" },
+        blade = { "blade-formatter" },
         css = { "prettier" },
         html = { "prettier" },
-        yaml = { "prettier" },
-        vue = { "prettier" },
-        markdown = { "prettier" },
+        javascript = { "prettier" },
         lua = { "stylua" },
-        php = { "pint" },
-        blade = { "blade-formatter" },
-        sql = { "sql_formatter" },
+        markdown = { "prettier" },
         mysql = { "sql_formatter" },
-        sqlite = { "sql_formatter" },
-        sh = { "beautysh" },
-        zsh = { "beautysh" },
-        bash = { "beautysh" },
         nginx = { "nginxfmt" },
+        php = { "pint" },
+        sh = { "beautysh" },
+        sql = { "sql_formatter" },
+        sqlite = { "sql_formatter" },
+        typescript = { "prettier" },
+        vue = { "prettier" },
+        yaml = { "prettier" },
+        zsh = { "beautysh" },
       },
       format_on_save = {
         lsp_fallback = true,
@@ -32,9 +31,12 @@ return {
       },
     })
 
-    conform.formatters.pint = { prepend_args = { "--config", lsp_config("pint") } }
-    conform.formatters.prettier = { prepend_args = { "--config", lsp_config("prettier") } }
-    conform.formatters.sql_formatter = { prepend_args = { "--config", lsp_config("sql-formatter") } }
+    local customFormatters = { "pint", "prettier", "sql_formatter" }
+    for _, formatter in ipairs(customFormatters) do
+      conform.formatters[formatter] = {
+        prepend_args = { "--config", vim.fn.stdpath("config") .. "/formatters/" .. formatter .. ".json" },
+      }
+    end
 
     vim.keymap.set({ "n", "v" }, "<leader>mf", function()
       conform.format({

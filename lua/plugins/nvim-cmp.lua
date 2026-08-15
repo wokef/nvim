@@ -12,7 +12,7 @@ return {
   config = function()
     local cmp = require("cmp")
     local luasnip = require("luasnip")
-    local snippet_path = require("bootstrap.common").config_path() .. "/snippets/"
+    local snippet_path = vim.fn.stdpath("config") .. "/snippets/"
     local lspkind = require("lspkind")
 
     local snipper_loader = require("luasnip.loaders.from_vscode").lazy_load
