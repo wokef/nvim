@@ -3,11 +3,6 @@ return {
     "nvim-treesitter/nvim-treesitter",
     lazy = false,
     build = ":TSUpdate",
-    -- dependencies = {
-    -- "JoosepAlviste/nvim-ts-context-commentstring",
-    -- { "nvim-treesitter/nvim-treesitter-textobjects", branch = "master" },
-    -- "windwp/nvim-ts-autotag",
-    -- },
     config = function()
       local ts = require("nvim-treesitter")
       local languages = {
