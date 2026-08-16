@@ -4,13 +4,12 @@ return {
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
-    { "folke/neodev.nvim", opts = {} },
   },
   config = function()
     local k = vim.keymap.set
 
     vim.api.nvim_create_autocmd("LspAttach", {
-      group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+      group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
       callback = function(ev)
         local opts = function(desc)
           return {
@@ -25,7 +24,7 @@ return {
         k("n", "<leader>lr", vim.lsp.buf.rename, opts("Smart rename"))
         k("n", "<leader>d", vim.diagnostic.open_float, opts("Show line diagnostics"))
         k("n", "K", vim.lsp.buf.hover, opts("Show documentation for what is under cursor"))
-        k("n", "<leader>lR", ":LspRestart<CR>", opts("Restart LSP"))
+        k("n", "<leader>lR", ":lsp restart<CR>", opts("Restart LSP"))
       end,
     })
 
