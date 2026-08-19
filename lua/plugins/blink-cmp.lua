@@ -1,26 +1,19 @@
 return {
   "saghen/blink.cmp",
-  branch = "main",
+  version = "1.*",
   event = "InsertEnter",
 
   dependencies = {
-    "saghen/blink.lib",
     "rafamadriz/friendly-snippets",
     "kristijanhusak/vim-dadbod-completion",
   },
 
-  build = function()
-    require("blink.cmp").build():pwait()
-  end,
-
-  ---@module "blink.cmp"
   opts = {
     keymap = {
       preset = "none",
 
       ["<Up>"] = { "select_prev", "fallback" },
       ["<Down>"] = { "select_next", "fallback" },
-
       ["<C-p>"] = { "select_prev", "fallback" },
       ["<C-n>"] = { "select_next", "fallback" },
 
@@ -110,7 +103,7 @@ return {
     },
 
     fuzzy = {
-      implementation = "lua",
+      implementation = "prefer_rust_with_warning",
     },
   },
 }
