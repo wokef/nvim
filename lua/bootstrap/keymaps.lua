@@ -9,10 +9,8 @@ k("n", "<leader>o", "<cmd>:on<CR>", { desc = "Close others windows" })
 k("n", "<leader>bo", "<cmd>:BufferLineCloseOthers<CR>", { desc = "Close others buffers" })
 k("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Files explorer" })
 k("n", "<leader>;", "<cmd>:Alpha<CR>", { desc = "Dashboard" })
-k("n", "<leader>lm", "<cmd>:Mason<CR>", { desc = "Mason" })
-k("n", "<leader>pm", "<cmd>:Lazy<CR>", { desc = "Lazy manager" })
-k("n", "<leader>pd", "<cmd>:DBUIToggle<CR>", { desc = "Database UI" })
-k("n", "<leader>pn", "<cmd>:ObsidianSearch<CR>", { desc = "Notes Obsidian" })
+k("n", "<leader>M", "<cmd>:Mason<CR>", { desc = "Mason" })
+k("n", "<leader>L", "<cmd>:Lazy<CR>", { desc = "Lazy manager" })
 k("n", "<leader>H", "<cmd>:Inspect<cr>", { desc = "Inspect highlight under cursor" })
 k("n", "<leader>lD", "<cmd>:ClearLogs<CR>", { desc = "Clear logs" })
 
@@ -68,7 +66,6 @@ k("n", "<leader>O", "<cmd>:copen<CR>", { desc = "Open quickfix list" })
 
 -- git
 k("n", "<leader>G", "<cmd>:LazyGit<CR>", { desc = "Lazygit" })
-k("n", "<leader>pD", "<cmd>:LazyDocker<CR>", { desc = "LazyDocker" })
 k("n", "<leader>gf", "<cmd>G<cr>", { desc = "Fugitive" })
 k("n", "<leader>gj", "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>", { desc = "Next Hunk" })
 k("n", "<leader>gk", "<cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>", { desc = "Prev Hunk" })
@@ -78,3 +75,7 @@ k("n", "<leader>gr", "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", { desc = "R
 k("n", "<leader>gs", "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", { desc = "Stage Hunk" })
 k("n", "<leader>gu", "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", { desc = "Undo Stage Hunk" })
 k("n", "<leader>gd", "<cmd>lua require 'gitsigns'.diffthis()<cr>", { desc = "Diff" })
+
+k("n", "<leader>D", "<cmd>:LazyDocker<CR>", { desc = "LazyDocker" })
+k("n", "<leader>U", "<cmd>:DBUIToggle<CR>", { desc = "Database UI" })
+k("n", "<leader>N", "<cmd>:ObsidianSearch<CR>", { desc = "Notes Obsidian" })
