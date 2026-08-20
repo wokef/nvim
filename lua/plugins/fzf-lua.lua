@@ -57,7 +57,7 @@ return {
     { "<leader>sr", "<cmd>FzfLua oldfiles<CR>", desc = "Search recent file" },
     { "<leader>sb", "<cmd>FzfLua buffers<CR>", desc = "Search in buffers" },
     { "<leader>sq", "<cmd>FzfLua quickfix<CR>", desc = "Search in quickfix" },
-    { "<leader>D", "<cmd>FzfLua diagnostics_document<CR>", desc = "Show buffer diagnostics" },
+    { "<leader>sD", "<cmd>FzfLua diagnostics_document<CR>", desc = "Show buffer diagnostics" },
     { "<leader>sd", "<cmd>FzfLua diagnostics_workspace<CR>", desc = "Search through diagnostics project messages" },
     { "<leader>sn", "<cmd>ObsidianTags<CR>", desc = "Search through notes by tags" },
     { "<leader>sT", "<cmd>TodoFzfLua<CR>", desc = "Search in TODO" },
