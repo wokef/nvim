@@ -4,11 +4,16 @@ return {
   event = "InsertEnter",
 
   dependencies = {
+    "L3MON4D3/LuaSnip",
     "rafamadriz/friendly-snippets",
     "kristijanhusak/vim-dadbod-completion",
   },
 
   opts = {
+    snippets = {
+      preset = "luasnip",
+    },
+
     keymap = {
       preset = "none",
 
@@ -119,4 +124,16 @@ return {
       implementation = "prefer_rust_with_warning",
     },
   },
+
+  config = function(_, opts)
+    require("luasnip.loaders.from_vscode").lazy_load()
+
+    require("luasnip.loaders.from_vscode").lazy_load({
+      paths = {
+        vim.fn.stdpath("config") .. "/snippets",
+      },
+    })
+
+    require("blink.cmp").setup(opts)
+  end,
 }
